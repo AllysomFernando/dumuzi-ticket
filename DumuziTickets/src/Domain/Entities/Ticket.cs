@@ -1,3 +1,5 @@
+using DumuziTickets.Domain.Assertions;
+
 namespace DumuziTickets.domain.entities;
 
 public class TicketBO : AbstractEntityBO<int>
@@ -12,6 +14,8 @@ public class TicketBO : AbstractEntityBO<int>
         Funcionario = funcionario;
         Quantidade = quantidade;
         Situacao = situacao;
+        
+        Validate();  
     }
 
     public FuncionarioBO Funcionario
@@ -30,5 +34,10 @@ public class TicketBO : AbstractEntityBO<int>
     {
         get => _situacao;
         private set => _situacao = value;
+    }
+
+    private void Validate()
+    {
+        Assert.IsNotNull(Funcionario, "Um ticket precisa ter um funcionario");
     }
 }
