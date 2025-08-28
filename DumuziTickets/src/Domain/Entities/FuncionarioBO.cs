@@ -1,8 +1,9 @@
 using DumuziTickets.Domain.Assertions;
+using DumuziTickets.Domain.Services;
 
 namespace DumuziTickets.domain.entities;
 
-public class FuncionarioBO : AbstractEntityBO<int>
+public class FuncionarioBO : AbstractEntityBO<int>, IDeletableEntity
 {   
     private string _nome;
     private string _cpf;
@@ -13,6 +14,8 @@ public class FuncionarioBO : AbstractEntityBO<int>
         Nome = nome;
         Cpf = cpf;
         Situacao = situacao;
+        
+        Validate();
     }
 
     public string Nome
@@ -37,6 +40,6 @@ public class FuncionarioBO : AbstractEntityBO<int>
     {
         Assert.IsNotNull(Cpf, "Um funcionário precisa ter um cpf.");
         Assert.IsNotNull(Nome, "Um funcionário precisa ter um nome.");
-
+        Assert.CpfIsValid(Cpf);
     }
 }

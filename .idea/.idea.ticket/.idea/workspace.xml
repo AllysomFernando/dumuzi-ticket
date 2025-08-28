@@ -9,11 +9,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d1c2da-e8d2-4665-af5d-76dbc684cef3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Mappers/FuncionarioMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Mappers/TicketMapper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Exceptions/BusinessExecption.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Repository/IFuncionarioRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Repository/IRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Repository/ITicketRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Services/IDeletableEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/CreateFuncionarioUseCase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/FindFuncionarioUseCase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/UpdateFuncionarioUseCase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/FuncionarioDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/FuncionarioDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/TicketDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/TicketDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Assertions/Assert.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Assertions/Assert.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/Funcionario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/FuncionarioBO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/Ticket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/TicketBO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Mappers/TicketMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Mappers/TicketMapper.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +38,20 @@
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/TicketDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/ENUM/Situacao.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/AbstractEntityBO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/Funcionario.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/Ticket.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/FuncionarioBO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/TicketBO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Exceptions/AssertException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Exceptions/BusinessExecption.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Mappers/FuncionarioMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Mappers/TicketMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Repository/IFuncionarioRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Repository/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Repository/ITicketRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Services/IDeletableEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/CreateFuncionarioUseCase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/FindFuncionarioUseCase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/UpdateFuncionarioUseCase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -108,7 +126,7 @@
       <option name="presentableId" value="Default" />
       <updated>1756324959782</updated>
       <workItem from="1756324961178" duration="5685000" />
-      <workItem from="1756383106497" duration="4516000" />
+      <workItem from="1756383106497" duration="16487000" />
     </task>
     <servers />
   </component>
