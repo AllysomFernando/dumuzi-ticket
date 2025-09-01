@@ -14,8 +14,8 @@ public class TicketBO : AbstractEntityBO<int>
         Funcionario = funcionario;
         Quantidade = quantidade;
         Situacao = situacao;
-        
-        Validate();  
+
+        Validate();
     }
 
     public FuncionarioBO Funcionario
