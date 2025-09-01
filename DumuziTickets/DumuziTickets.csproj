@@ -20,7 +20,6 @@
     <ItemGroup>
       <Folder Include="src\Application\useCases\" />
       <Folder Include="src\Infra\Persistence\PgSQL\Migrations\" />
-      <Folder Include="src\Infra\Persistence\PgSQL\Repository\" />
     </ItemGroup>
 
 </Project>

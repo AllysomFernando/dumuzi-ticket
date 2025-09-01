@@ -1,5 +1,5 @@
 using DumuziTickets.domain;
-using DumuziTickets.Domain.Dto;
+using DumuziTickets.domain.entities;
 using DumuziTickets.Infra.Persistence.PgSQL.Entities;
 using DumuziTickets.Infra.Persistence.PgSQL.Enum;
 
@@ -7,26 +7,26 @@ namespace DumuziTickets.Infra.Persistence.PgSQL.Mappers;
 
 public static class PgTicketMapper
 {
-    public static PgTicketEntity ToEntity(TicketDTO dto)
+    public static PgTicketEntity ToEntity(TicketBO bo)
     {
             return new PgTicketEntity(
-                dto.Quantidade,
-                PgFuncionarioMapper.ToEntity(dto.Funcionario),
-                (Situacao)dto.Situacao,
-                dto.CreatedAt,
-                dto.UpdatedAt);
+                bo.Quantidade,
+                PgFuncionarioMapper.ToEntity(bo.Funcionario),
+                (Situacao)bo.Situacao,
+                bo.CreatedAt,
+                bo.UpdatedAt);
     }
 
-    public static TicketDTO ToDto(PgTicketEntity entity)
+    public static TicketBO ToBO(PgTicketEntity entity)
     {
-        return new TicketDTO
-        {
-            Id = entity.Id,
-            Quantidade = entity.Quantidade,
-            Funcionario = PgFuncionarioMapper.ToDto(entity.Funcionario),
-            Situacao = (EnumSituacao)entity.Situacao,
-            CreatedAt = entity.CreatedAt,
-            UpdatedAt = entity.UpdatedAt
-        };
+        return new TicketBO(
+            entity.Id,
+            entity.Quantidade,
+            PgFuncionarioMapper.ToBO(entity.Funcionario),
+            (EnumSituacao)entity.Situacao,
+            entity.CreatedAt,
+            entity.UpdatedAt
+        );
+
     }
 }

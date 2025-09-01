@@ -1,5 +1,6 @@
 using DumuziTickets.domain;
 using DumuziTickets.Domain.Dto;
+using DumuziTickets.domain.entities;
 using DumuziTickets.Infra.Persistence.PgSQL.Entities;
 using DumuziTickets.Infra.Persistence.PgSQL.Enum;
 
@@ -7,21 +8,20 @@ namespace DumuziTickets.Infra.Persistence.PgSQL.Mappers;
 
 public static class PgFuncionarioMapper
 {
-    public static PgFuncionarioEntity ToEntity(FuncionarioDTO dto)
+    public static PgFuncionarioEntity ToEntity(FuncionarioBO bo)
     {
-        return new PgFuncionarioEntity(dto.Nome, dto.Cpf, (Situacao)dto.Situacao, dto.CreatedAt, dto.UpdatedAt);
+        return new PgFuncionarioEntity(bo.Nome, bo.Cpf, (Situacao)bo.Situacao, bo.CreatedAt, bo.UpdatedAt);
     }
 
-    public static FuncionarioDTO ToDto(PgFuncionarioEntity entity)
+    public static FuncionarioBO ToBO(PgFuncionarioEntity entity)
     {
-        return new FuncionarioDTO
-        {
-            Id = entity.Id,
-            Nome = entity.Nome,
-            Cpf = entity.Cpf,
-            Situacao = (EnumSituacao)entity.Situacao,
-            CreatedAt = entity.CreatedAt,
-            UpdatedAt = entity.UpdatedAt
-        };
+        return new FuncionarioBO(
+                entity.Id,
+                entity.Nome,
+                entity.Cpf,
+                (EnumSituacao)entity.Situacao,
+                entity.CreatedAt,
+                entity.UpdatedAt
+            );
     }
 }
