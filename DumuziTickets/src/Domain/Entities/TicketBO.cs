@@ -6,9 +6,9 @@ public class TicketBO : AbstractEntityBO<int>
 {
     private FuncionarioBO _funcionario;
     private int _quantidade;
-    private Situacao _situacao;
+    private EnumSituacao _situacao;
 
-    public TicketBO(int id, int quantidade, FuncionarioBO funcionario, Situacao situacao, DateTime createdAt,
+    public TicketBO(int id, int quantidade, FuncionarioBO funcionario, EnumSituacao situacao, DateTime createdAt,
         DateTime updatedAt) : base(id, createdAt, updatedAt)
     {
         Funcionario = funcionario;
@@ -30,7 +30,7 @@ public class TicketBO : AbstractEntityBO<int>
         private set => _quantidade = value;
     }
 
-    public Situacao Situacao
+    public EnumSituacao Situacao
     {
         get => _situacao;
         private set => _situacao = value;

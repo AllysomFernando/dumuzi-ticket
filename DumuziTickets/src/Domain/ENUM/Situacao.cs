@@ -1,7 +1,7 @@
 namespace DumuziTickets.domain;
 
-public enum Situacao
+public enum EnumSituacao
 {
-    Ativo,
-    Inativo
+    A,
+    I
  }

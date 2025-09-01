@@ -9,13 +9,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d1c2da-e8d2-4665-af5d-76dbc684cef3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Config/PostgresDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Entities/PgFuncionarioEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Entities/PgSituacaoEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Entities/PgTicketEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Enum/Situacao.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Mappers/PgFuncionarioMapper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Mappers/PgTicketMapper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DumuziTickets/DumuziTickets.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/DumuziTickets.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/FuncionarioDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/FuncionarioDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/TicketDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/TicketDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/ENUM/Situacao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/ENUM/Situacao.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/FuncionarioBO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/FuncionarioBO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/TicketBO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/TicketBO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Config/PostgresDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Config/PostgresDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Entities/PgFuncionarioEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Entities/PgFuncionarioEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Entities/PgSituacaoEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Entities/PgTicketEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Entities/PgTicketEntity.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +58,11 @@
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Config/PostgresDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Entities/PgFuncionarioEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Entities/PgSituacaoEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Entities/PgTicketEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Enum/Situacao.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Mappers/PgFuncionarioMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Mappers/PgTicketMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/71f8a5297672ad56962c6af62f7241a092ad7d95eaee4ef564601be5d8e37b38/Int32.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -138,7 +148,7 @@
       <workItem from="1756413905220" duration="2760000" />
       <workItem from="1756492765522" duration="5909000" />
       <workItem from="1756728066125" duration="7227000" />
-      <workItem from="1756737006877" duration="3474000" />
+      <workItem from="1756737006877" duration="7926000" />
     </task>
     <servers />
   </component>

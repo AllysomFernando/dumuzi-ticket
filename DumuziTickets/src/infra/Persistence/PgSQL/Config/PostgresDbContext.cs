@@ -11,5 +11,4 @@ public class PostgresDbContext : DbContext
 
     public DbSet<PgFuncionarioEntity> Funcionarios { get; set; }
     public DbSet<PgTicketEntity> Tickets { get; set; }
-    public DbSet<PgSituacaoEntity> Situacoes { get; set; }
 }
