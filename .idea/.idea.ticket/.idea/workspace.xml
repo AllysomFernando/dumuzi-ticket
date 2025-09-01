@@ -9,23 +9,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d1c2da-e8d2-4665-af5d-76dbc684cef3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/FindTicketUseCase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/UpdateticketUseCase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Request/FuncionarioRequestDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Request/TicketRequestDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Response/FuncionarioResponseDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Response/TicketResponseDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Mappers/TicketMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Mappers/TicketMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Repository/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Repository/IRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/DumuziTickets.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/DumuziTickets.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Request/FuncionarioRequestDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Request/TicketRequestDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Response/FuncionarioResponseDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Response/TicketResponseDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Assertions/Assert.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/FuncionarioDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/TicketDTO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -77,27 +86,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.DumuziTickets: http.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;GitIgnore&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "GitIgnore"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.DumuziTickets: http">
     <configuration name="DumuziTickets: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/DumuziTickets/DumuziTickets.csproj" />
@@ -146,7 +156,7 @@
       <workItem from="1756413905220" duration="2760000" />
       <workItem from="1756492765522" duration="5909000" />
       <workItem from="1756728066125" duration="7227000" />
-      <workItem from="1756737006877" duration="12509000" />
+      <workItem from="1756737006877" duration="15122000" />
     </task>
     <servers />
   </component>

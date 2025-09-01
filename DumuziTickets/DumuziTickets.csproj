@@ -18,7 +18,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="src\Application\useCases\" />
       <Folder Include="src\Infra\Persistence\PgSQL\Migrations\" />
     </ItemGroup>
 
