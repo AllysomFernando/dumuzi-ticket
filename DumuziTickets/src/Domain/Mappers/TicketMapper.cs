@@ -5,7 +5,7 @@ namespace DumuziTickets.Domain.Mappers;
 
 public class TicketMapper
 {
-    public static TicketDTO ToDto(TicketBO bo)
+    public static TicketDTO ToDTO(TicketBO bo)
     {
         TicketDTO dto = new TicketDTO();
 
@@ -18,7 +18,7 @@ public class TicketMapper
         return dto;
     }
 
-    public static TicketBO ToBo(TicketDTO dto)
+    public static TicketBO ToBO(TicketDTO dto)
     {
         FuncionarioBO funcionario = FuncionarioMapper.ToBO(dto.Funcionario);
         return new TicketBO(dto.Id, dto.Quantidade, funcionario, dto.Situacao, dto.CreatedAt, dto.UpdatedAt);

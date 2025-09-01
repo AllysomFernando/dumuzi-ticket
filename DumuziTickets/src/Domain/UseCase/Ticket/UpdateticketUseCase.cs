@@ -5,12 +5,11 @@ using DumuziTickets.Domain.Repository;
 
 namespace DumuziTickets.Domain.UseCase.Ticket;
 
-public class CreateTicketUseCase
+public class UpdateticketUseCase
 {
     private readonly ITicketRepository _ticketRepository;
-    private readonly IFuncionarioRepository _funcionarioRepository;
 
-    public CreateTicketUseCase(ITicketRepository ticketRepository)
+    public UpdateticketUseCase(ITicketRepository ticketRepository)
     {
         _ticketRepository = ticketRepository;
     }
@@ -18,13 +17,7 @@ public class CreateTicketUseCase
     public TicketDTO Execute(TicketDTO dto)
     {
         TicketBO bo = TicketMapper.ToBO(dto);
-        bo = _ticketRepository.Create(bo);
-
+        bo = _ticketRepository.Update(bo);
         return TicketMapper.ToDTO(bo);
-    }
-
-    private void Validate(TicketDTO dto)
-    {
-
     }
 }

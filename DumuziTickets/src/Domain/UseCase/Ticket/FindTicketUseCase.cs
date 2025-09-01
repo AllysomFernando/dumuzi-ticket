@@ -1,3 +1,4 @@
+using DumuziTickets.Domain.Assertions;
 using DumuziTickets.Domain.Dto;
 using DumuziTickets.domain.entities;
 using DumuziTickets.Domain.Mappers;
@@ -5,26 +6,19 @@ using DumuziTickets.Domain.Repository;
 
 namespace DumuziTickets.Domain.UseCase.Ticket;
 
-public class CreateTicketUseCase
+public class FindTicketUseCase
 {
     private readonly ITicketRepository _ticketRepository;
-    private readonly IFuncionarioRepository _funcionarioRepository;
 
-    public CreateTicketUseCase(ITicketRepository ticketRepository)
+    public FindTicketUseCase(ITicketRepository ticketRepository)
     {
         _ticketRepository = ticketRepository;
     }
 
-    public TicketDTO Execute(TicketDTO dto)
+    public TicketDTO Execute(int ticketId)
     {
-        TicketBO bo = TicketMapper.ToBO(dto);
-        bo = _ticketRepository.Create(bo);
-
+        TicketBO? bo = _ticketRepository.FindById(ticketId);
+        Assert.IsNull(bo, "ticket não encontrado");
         return TicketMapper.ToDTO(bo);
-    }
-
-    private void Validate(TicketDTO dto)
-    {
-
     }
 }
