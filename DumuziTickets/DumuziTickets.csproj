@@ -18,7 +18,24 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="src\Application\UseCase\" />
       <Folder Include="src\Infra\Persistence\PgSQL\Migrations\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="src\Application\Services\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="src\Application\Services\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="src\Application\Services\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="src\Application\Services\**" />
     </ItemGroup>
 
 </Project>

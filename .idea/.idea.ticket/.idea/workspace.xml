@@ -9,15 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d1c2da-e8d2-4665-af5d-76dbc684cef3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Request/FuncionarioRequestDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Request/TicketRequestDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Response/FuncionarioResponseDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Response/TicketResponseDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Gateway/IFuncionario.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Gateway/ITicket.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DumuziTickets/DumuziTickets.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/DumuziTickets.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +30,8 @@
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Request/TicketRequestDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Response/FuncionarioResponseDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Response/TicketResponseDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Application/Gateway/IFuncionario.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Application/Gateway/ITicket.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Assertions/Assert.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/FuncionarioDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/TicketDTO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -156,7 +153,7 @@
       <workItem from="1756413905220" duration="2760000" />
       <workItem from="1756492765522" duration="5909000" />
       <workItem from="1756728066125" duration="7227000" />
-      <workItem from="1756737006877" duration="15122000" />
+      <workItem from="1756737006877" duration="16499000" />
     </task>
     <servers />
   </component>
