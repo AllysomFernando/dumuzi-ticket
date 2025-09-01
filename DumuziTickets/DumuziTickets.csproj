@@ -19,7 +19,7 @@
 
     <ItemGroup>
       <Folder Include="src\Application\useCases\" />
-      <Folder Include="src\infra\" />
+      <Folder Include="src\Infra\" />
     </ItemGroup>
 
 </Project>

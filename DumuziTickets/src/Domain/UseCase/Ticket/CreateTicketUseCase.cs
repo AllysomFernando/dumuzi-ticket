@@ -9,7 +9,7 @@ public class CreateTicketUseCase
 {
     private readonly ITicketRepository _ticketRepository;
     private readonly IFuncionarioRepository _funcionarioRepository;
-    
+
     public CreateTicketUseCase(ITicketRepository ticketRepository)
     {
         _ticketRepository = ticketRepository;
@@ -17,14 +17,14 @@ public class CreateTicketUseCase
 
     public TicketDTO Execute(TicketDTO dto)
     {
-        TicketBO bo = TicketMapper.ToBO(dto);
+        TicketBO bo = TicketMapper.ToBo(dto);
         bo = _ticketRepository.Create(bo);
-        
-        return TicketMapper.ToDTO(bo);
+
+        return TicketMapper.ToDto(bo);
     }
 
     private void Validate(TicketDTO dto)
     {
-        
+
     }
 }

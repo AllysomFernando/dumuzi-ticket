@@ -1,3 +1,6 @@
+using DumuziTickets.Domain.Dto;
+using DumuziTickets.domain.entities;
+using DumuziTickets.Domain.Mappers;
 using DumuziTickets.Domain.Repository;
 
 namespace DumuziTickets.Domain.UseCase.Funcionario;
@@ -8,6 +11,13 @@ public class UpdateFuncionarioUseCase
 
     public UpdateFuncionarioUseCase(IFuncionarioRepository funcionarioRepository)
     {
-        
+        _funcionarioRepository = funcionarioRepository;
+    }
+
+    public FuncionarioDTO Execute(FuncionarioDTO dto)
+    {
+        FuncionarioBO bo = FuncionarioMapper.ToBO(dto);
+        bo = _funcionarioRepository.Update(bo);
+        return FuncionarioMapper.ToDTO(bo);
     }
 }

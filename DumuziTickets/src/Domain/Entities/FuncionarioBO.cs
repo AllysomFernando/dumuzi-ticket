@@ -4,17 +4,17 @@ using DumuziTickets.Domain.Services;
 namespace DumuziTickets.domain.entities;
 
 public class FuncionarioBO : AbstractEntityBO<int>, IDeletableEntity
-{   
+{
     private string _nome;
     private string _cpf;
     private Situacao _situacao;
-    
+
     public FuncionarioBO(int id, string nome, string cpf, Situacao situacao,  DateTime createdAt, DateTime updatedAt) : base(id, createdAt, updatedAt)
     {
         Nome = nome;
         Cpf = cpf;
         Situacao = situacao;
-        
+
         Validate();
     }
 
@@ -35,6 +35,16 @@ public class FuncionarioBO : AbstractEntityBO<int>, IDeletableEntity
         get => _situacao;
         private set => _situacao = value;
     }
+
+    public void Update(FuncionarioBO bo)
+    {
+        Nome = bo.Nome;
+        Cpf = bo.Cpf;
+        Situacao = bo.Situacao;
+
+        Validate();
+    }
+
 
     private void Validate()
     {

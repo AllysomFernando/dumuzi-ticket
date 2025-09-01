@@ -4,4 +4,4 @@ public enum Situacao
 {
     Ativo,
     Inativo
-}
+ }
