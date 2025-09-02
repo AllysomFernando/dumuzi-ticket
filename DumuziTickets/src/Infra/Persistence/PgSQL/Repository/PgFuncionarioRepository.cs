@@ -10,6 +10,11 @@ public class PgFuncionarioRepository : IFuncionarioRepository
 {
     private readonly PostgresDbContext _context;
 
+    public PgFuncionarioRepository(PostgresDbContext context)
+    {
+        _context = context;
+    }
+
     public IEnumerable<FuncionarioBO> FindAll()
     {
         IEnumerable<PgFuncionarioEntity> entities = _context.Funcionarios.ToList();

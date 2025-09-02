@@ -10,6 +10,10 @@ public class PgTicketRepository : ITicketRepository
 {
         private readonly PostgresDbContext _context;
 
+        public PgTicketRepository(PostgresDbContext context)
+        {
+                _context = context;
+        }
         public IEnumerable<TicketBO> FindAll()
         {
                 IEnumerable<PgTicketEntity> entities = _context.Tickets.ToList();

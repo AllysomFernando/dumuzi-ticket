@@ -18,24 +18,38 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="src\Application\UseCase\" />
-      <Folder Include="src\Infra\Persistence\PgSQL\Migrations\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Compile Remove="src\Application\Services\**" />
+      <Compile Remove="src\Application\Gateway\**" />
+      <Compile Remove="src\Application\Mappers\**" />
+      <Compile Remove="src\Application\UseCase\**" />
+      <Compile Remove="src\Domain\UseCase\Funcionario\FindAllFuncionarioUseCase.cs" />
+      <Compile Remove="src\Application\Service\Interfaces\IFuncionarioService.cs" />
+      <Compile Remove="src\Infra\Persistence\PgSQL\Migrations\**" />
+      <Compile Remove="src\Infra\Persistence\PgSQL\Config\PostgresDbContextFabric.cs" />
     </ItemGroup>
 
     <ItemGroup>
       <EmbeddedResource Remove="src\Application\Services\**" />
+      <EmbeddedResource Remove="src\Application\Gateway\**" />
+      <EmbeddedResource Remove="src\Application\Mappers\**" />
+      <EmbeddedResource Remove="src\Application\UseCase\**" />
+      <EmbeddedResource Remove="src\Infra\Persistence\PgSQL\Migrations\**" />
     </ItemGroup>
 
     <ItemGroup>
       <Content Remove="src\Application\Services\**" />
+      <Content Remove="src\Application\Gateway\**" />
+      <Content Remove="src\Application\Mappers\**" />
+      <Content Remove="src\Application\UseCase\**" />
+      <Content Remove="src\Infra\Persistence\PgSQL\Migrations\**" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="src\Application\Services\**" />
+      <None Remove="src\Application\Gateway\**" />
+      <None Remove="src\Application\Mappers\**" />
+      <None Remove="src\Application\UseCase\**" />
+      <None Remove="src\Infra\Persistence\PgSQL\Migrations\**" />
     </ItemGroup>
 
 </Project>

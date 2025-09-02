@@ -1,6 +1,5 @@
 using DumuziTickets.Domain.Assertions;
 using DumuziTickets.Domain.Dto;
-using DumuziTickets.domain.entities;
 using DumuziTickets.Domain.Mappers;
 using DumuziTickets.Domain.Repository;
 
@@ -17,7 +16,7 @@ public class FindFuncionarioUseCase
 
     public FuncionarioDTO Execute(int funcionarioId)
     {
-        FuncionarioBO? bo = _funcionarioRepository.FindById(funcionarioId);
+        var bo = _funcionarioRepository.FindById(funcionarioId);
         Assert.IsNull(bo, "Funcionario não encontrado");
         return FuncionarioMapper.ToDTO(bo);
     }

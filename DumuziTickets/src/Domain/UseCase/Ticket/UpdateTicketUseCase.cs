@@ -5,11 +5,11 @@ using DumuziTickets.Domain.Repository;
 
 namespace DumuziTickets.Domain.UseCase.Ticket;
 
-public class UpdateticketUseCase
+public class UpdateTicketUseCase
 {
     private readonly ITicketRepository _ticketRepository;
 
-    public UpdateticketUseCase(ITicketRepository ticketRepository)
+    public UpdateTicketUseCase(ITicketRepository ticketRepository)
     {
         _ticketRepository = ticketRepository;
     }

@@ -1,5 +1,4 @@
 using DumuziTickets.Domain.Dto;
-using DumuziTickets.domain.entities;
 using DumuziTickets.Domain.Mappers;
 using DumuziTickets.Domain.Repository;
 
@@ -16,9 +15,11 @@ public class CreateFuncionarioUseCase
 
     public FuncionarioDTO Execute(FuncionarioDTO dto)
     {
-        FuncionarioBO bo = FuncionarioMapper.ToBO(dto);
+        Console.WriteLine($"dto {dto}");
+        var bo = FuncionarioMapper.ToBO(dto);
+
         bo = _funcionarioRepository.Create(bo);
-        
+
         return FuncionarioMapper.ToDTO(bo);
     }
 }

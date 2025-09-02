@@ -10,7 +10,7 @@ public class FuncionarioBO : AbstractEntityBO<int>, IDeletableEntity
     private EnumSituacao _situacao;
 
     public FuncionarioBO(int id, string nome, string cpf, EnumSituacao situacao,  DateTime createdAt, DateTime updatedAt) : base(id, createdAt, updatedAt)
-    {
+    {   
         Nome = nome;
         Cpf = cpf;
         Situacao = situacao;
