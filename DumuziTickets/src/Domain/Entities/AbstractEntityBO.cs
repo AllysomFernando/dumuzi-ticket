@@ -1,3 +1,5 @@
+using DumuziTickets.Domain.Assertions;
+
 namespace DumuziTickets.domain.entities;
 
 public abstract class AbstractEntityBO<K>
@@ -11,6 +13,8 @@ public abstract class AbstractEntityBO<K>
                 Id = id;
                 UpdatedAt = updatedAt;
                 Situacao = situacao;
+
+                Validate();
         }
 
         public K Id
@@ -37,4 +41,8 @@ public abstract class AbstractEntityBO<K>
                 _updatedAt = DateTime.UtcNow;
         }
 
+        private void Validate()
+        {
+                Assert.IsFalse(Situacao == EnumSituacao.I, "Não pode criar um funcionário já inativo.");
+        }
 }
