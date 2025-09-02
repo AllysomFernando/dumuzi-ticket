@@ -24,6 +24,30 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.UseExceptionHandler(errorApp =>
+{
+    errorApp.Run(async context =>
+    {
+        context.Response.ContentType = "application/json";
+
+        var exceptionHandlerPathFeature = context.Features.Get<Microsoft.AspNetCore.Diagnostics.IExceptionHandlerPathFeature>();
+        var exception = exceptionHandlerPathFeature?.Error;
+
+        context.Response.StatusCode = exception switch
+        {
+            DbUpdateException => 400,
+            KeyNotFoundException => 404,
+            DumuziTickets.Domain.Exceptions.AssertException => 400,
+            _ => 500
+        };
+
+        await context.Response.WriteAsJsonAsync(new
+        {
+            error = exception?.Message
+        });
+    });
+});
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
