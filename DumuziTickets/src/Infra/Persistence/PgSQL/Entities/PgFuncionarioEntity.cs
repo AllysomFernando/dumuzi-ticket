@@ -13,15 +13,13 @@ public class PgFuncionarioEntity
     [Required] public string Nome { get; private set; }
     [Required] public string Cpf { get; private set; }
     [Required] public Situacao Situacao { get; private set; }
-    [Required] public DateTime CreatedAt { get; private set; }
     [Required] public DateTime UpdatedAt { get; private set; }
 
-    public PgFuncionarioEntity(string nome, string cpf, Situacao situacao, DateTime createdAt, DateTime updatedAt)
+    public PgFuncionarioEntity(string nome, string cpf, Situacao situacao, DateTime updatedAt)
     {
         Nome = nome;
         Cpf = cpf;
         Situacao = situacao;
-        CreatedAt = createdAt;
         UpdatedAt = updatedAt;
     }
 

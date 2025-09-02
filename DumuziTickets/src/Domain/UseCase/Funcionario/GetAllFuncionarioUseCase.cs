@@ -23,7 +23,6 @@ public class GetAllFuncionarioUseCase
             Nome = bo.Nome,
             Cpf = bo.Cpf,
             Situacao = bo.Situacao,
-            CreatedAt = bo.CreatedAt,
             UpdatedAt = bo.UpdatedAt
         });
 

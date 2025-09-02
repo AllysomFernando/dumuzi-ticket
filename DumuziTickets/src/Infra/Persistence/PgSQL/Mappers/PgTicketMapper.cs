@@ -13,7 +13,6 @@ public static class PgTicketMapper
                 bo.Quantidade,
                 PgFuncionarioMapper.ToEntity(bo.Funcionario),
                 (Situacao)bo.Situacao,
-                bo.CreatedAt,
                 bo.UpdatedAt);
     }
 
@@ -24,7 +23,6 @@ public static class PgTicketMapper
             entity.Quantidade,
             PgFuncionarioMapper.ToBO(entity.Funcionario),
             (EnumSituacao)entity.Situacao,
-            entity.CreatedAt,
             entity.UpdatedAt
         );
 

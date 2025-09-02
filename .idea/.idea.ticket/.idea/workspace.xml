@@ -9,39 +9,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d1c2da-e8d2-4665-af5d-76dbc684cef3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Mappers/FuncionarioMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Implementation/FuncionarioService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Implementation/TicketService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Interfaces/IFuncionario.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Interfaces/IFuncionarioService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Interfaces/ITicket.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/UseCase/Funcionario/CreateFuncionarioUseCase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/FindAllFuncionarioUseCase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/GetAllFuncionarioUseCase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/GetAllTicketUseCase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Config/PostgresDbContextFabric.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/FuncionarioController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/DumuziTickets.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/DumuziTickets.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Gateway/IFuncionario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Gateway/IFuncionario.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Assertions/Assert.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Assertions/Assert.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Request/FuncionarioRequestDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Request/FuncionarioRequestDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Request/TicketRequestDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Request/TicketRequestDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Response/FuncionarioResponseDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Response/FuncionarioResponseDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Response/TicketResponseDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Response/TicketResponseDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/FuncionarioDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/FuncionarioDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/TicketDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/TicketDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/AbstractEntityBO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/AbstractEntityBO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/FuncionarioBO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/FuncionarioBO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/TicketBO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/TicketBO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Mappers/FuncionarioMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Mappers/FuncionarioMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Mappers/TicketMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Mappers/TicketMapper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/CreateFuncionarioUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/CreateFuncionarioUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/FindFuncionarioUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/FindFuncionarioUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/GetAllFuncionarioUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/GetAllFuncionarioUseCase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/UpdateFuncionarioUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/UpdateFuncionarioUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/UpdateticketUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/UpdateTicketUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/GetAllTicketUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/GetAllTicketUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Entities/PgFuncionarioEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Entities/PgFuncionarioEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Entities/PgTicketEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Entities/PgTicketEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Mappers/PgFuncionarioMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Mappers/PgFuncionarioMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Mappers/PgTicketMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Mappers/PgTicketMapper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Config/PostgresDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Config/PostgresDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Entities/PgFuncionarioEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Entities/PgFuncionarioEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Entities/PgTicketEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Entities/PgTicketEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Enum/Situacao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Enum/Situacao.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Mappers/PgFuncionarioMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Mappers/PgFuncionarioMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Mappers/PgTicketMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Mappers/PgTicketMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Repository/PgFuncionarioRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgFuncionarioRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/ticket.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,29 +111,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.DumuziTickets: http.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "XThreadsFramesViewSplitterKey": "0.251806",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.DumuziTickets: http.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.251806&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "GitIgnore"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;GitIgnore&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.DumuziTickets: http">
     <configuration name="DumuziTickets: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/DumuziTickets/DumuziTickets.csproj" />
@@ -198,6 +187,7 @@
       <workItem from="1756816004660" duration="907000" />
       <workItem from="1756816926770" duration="1941000" />
       <workItem from="1756818881483" duration="11156000" />
+      <workItem from="1756839506291" duration="1222000" />
     </task>
     <servers />
   </component>
@@ -224,19 +214,6 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/CreateFuncionarioUseCase.cs</url>
-          <line>17</line>
-          <properties documentPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/CreateFuncionarioUseCase.cs" containingFunctionPresentation="Method 'Execute'">
-            <startOffsets>
-              <option value="489" />
-            </startOffsets>
-            <endOffsets>
-              <option value="521" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -8,7 +8,5 @@ public record FuncionarioRequestDTO()
     public string Nome { get; set; }
     public string Cpf { get; set; }
     public EnumSituacao Situacao { get; set; }
-    public DateTime? CreatedAt { get; set; }
-    public DateTime? UpdatedAt { get; set; }
 }
 

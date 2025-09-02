@@ -15,9 +15,8 @@ public class CreateFuncionarioUseCase
 
     public FuncionarioDTO Execute(FuncionarioDTO dto)
     {
-        Console.WriteLine($"dto {dto}");
         var bo = FuncionarioMapper.ToBO(dto);
-
+        bo.AtualizarData();
         bo = _funcionarioRepository.Create(bo);
 
         return FuncionarioMapper.ToDTO(bo);

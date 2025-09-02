@@ -12,13 +12,12 @@ public class FuncionarioMapper
         dto.Nome = bo.Nome;
         dto.Cpf = bo.Cpf;
         dto.Situacao = bo.Situacao;
-        dto.CreatedAt = bo.CreatedAt;
         dto.UpdatedAt = bo.UpdatedAt;
         return dto;
     }
 
     public static FuncionarioBO ToBO(FuncionarioDTO dto)
     {
-        return new FuncionarioBO(dto.Id, dto.Nome, dto.Cpf, dto.Situacao, dto.CreatedAt, dto.UpdatedAt);
+        return new FuncionarioBO(dto.Id, dto.Nome, dto.Cpf, dto.Situacao, dto.UpdatedAt);
     }
 }

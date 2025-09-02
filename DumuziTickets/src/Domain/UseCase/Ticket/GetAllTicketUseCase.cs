@@ -24,7 +24,6 @@ public class GetAllTicketUseCase
             Funcionario = FuncionarioMapper.ToDTO(bo.Funcionario),
             Quantidade = bo.Quantidade,
             Situacao = bo.Situacao,
-            CreatedAt = bo.CreatedAt,
             UpdatedAt = bo.UpdatedAt,
         });
 

@@ -10,7 +10,7 @@ public static class PgFuncionarioMapper
 {
     public static PgFuncionarioEntity ToEntity(FuncionarioBO bo)
     {
-        return new PgFuncionarioEntity(bo.Nome, bo.Cpf, (Situacao)bo.Situacao, bo.CreatedAt, bo.UpdatedAt);
+        return new PgFuncionarioEntity(bo.Nome, bo.Cpf, (Situacao)bo.Situacao, bo.UpdatedAt);
     }
 
     public static FuncionarioBO ToBO(PgFuncionarioEntity entity)
@@ -20,7 +20,6 @@ public static class PgFuncionarioMapper
                 entity.Nome,
                 entity.Cpf,
                 (EnumSituacao)entity.Situacao,
-                entity.CreatedAt,
                 entity.UpdatedAt
             );
     }

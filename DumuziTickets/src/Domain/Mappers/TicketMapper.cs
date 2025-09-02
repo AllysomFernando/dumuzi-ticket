@@ -13,7 +13,6 @@ public class TicketMapper
         dto.Funcionario = FuncionarioMapper.ToDTO(bo.Funcionario);
         dto.Quantidade = bo.Quantidade;
         dto.Situacao = bo.Situacao;
-        dto.CreatedAt = bo.CreatedAt;
         dto.UpdatedAt = bo.UpdatedAt;
         return dto;
     }
@@ -21,6 +20,6 @@ public class TicketMapper
     public static TicketBO ToBO(TicketDTO dto)
     {
         FuncionarioBO funcionario = FuncionarioMapper.ToBO(dto.Funcionario);
-        return new TicketBO(dto.Id, dto.Quantidade, funcionario, dto.Situacao, dto.CreatedAt, dto.UpdatedAt);
+        return new TicketBO(dto.Id, dto.Quantidade, funcionario, dto.Situacao,  dto.UpdatedAt);
     }
 }

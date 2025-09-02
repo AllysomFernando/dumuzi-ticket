@@ -18,13 +18,8 @@ public class CreateTicketUseCase
     public TicketDTO Execute(TicketDTO dto)
     {
         TicketBO bo = TicketMapper.ToBO(dto);
+        bo.AtualizarData();
         bo = _ticketRepository.Create(bo);
-
         return TicketMapper.ToDTO(bo);
-    }
-
-    private void Validate(TicketDTO dto)
-    {
-
     }
 }

@@ -12,7 +12,6 @@ builder.Services.AddDbContext<PostgresDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-
 builder.Services.AddScoped<IFuncionarioRepository, PgFuncionarioRepository>();
 builder.Services.AddScoped<ITicketRepository, PgTicketRepository>();
 

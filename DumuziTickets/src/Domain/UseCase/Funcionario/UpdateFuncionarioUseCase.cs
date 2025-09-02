@@ -16,6 +16,7 @@ public class UpdateFuncionarioUseCase
     public FuncionarioDTO Execute(FuncionarioDTO dto)
     {
         var bo = FuncionarioMapper.ToBO(dto);
+        bo.AtualizarData();
         bo = _funcionarioRepository.Update(bo);
         return FuncionarioMapper.ToDTO(bo);
     }
