@@ -28,6 +28,15 @@ public class FuncionarioBO : AbstractEntityBO<int>, IDeletableEntity
         get => _cpf;
         private set => _cpf = value;
     }
+    public void AtualizarFuncionario(FuncionarioBO bo)
+    {
+        Nome = bo.Nome;
+        Cpf = bo.Cpf;
+        Situacao = bo.Situacao;
+        AtualizarData();
+
+        Validate();
+    }
 
     private void Validate()
     {

@@ -26,10 +26,19 @@ public class Assert
 
     public static void CpfIsValid(string cpf)
     {
+        if (string.IsNullOrWhiteSpace(cpf))
+            throw new AssertException("CPF não pode ser vazio.");
+
         cpf = cpf.Trim().Replace(".", "").Replace("-", "");
+
+        if (!cpf.All(char.IsDigit))
+            throw new AssertException("CPF deve conter apenas números.");
 
         if (cpf.Length != 11)
             throw new AssertException("CPF deve ter 11 dígitos.");
+
+        if (cpf.All(c => c == cpf[0]))
+            throw new AssertException("CPF inválido.");
 
         string[] cpfsInvalidos = {
             "00000000000", "11111111111", "22222222222", "33333333333",
@@ -40,14 +49,6 @@ public class Assert
         if (cpfsInvalidos.Contains(cpf))
             throw new AssertException("CPF inválido.");
 
-        cpf = cpf.Trim().Replace(".", "").Replace("-", "");
-
-        if (cpf.Length != 11)
-            throw new AssertException("CPF deve ter 11 dígitos.");
-
-        if (cpf.All(c => c == cpf[0]))
-            throw new AssertException("CPF inválido.");
-
         int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
         int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
 
@@ -55,7 +56,7 @@ public class Assert
         int soma = 0;
 
         for (int i = 0; i < 9; i++)
-            soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
+            soma += (tempCpf[i] - '0') * multiplicador1[i];
 
         int resto = soma % 11;
         int digito1 = resto < 2 ? 0 : 11 - resto;
@@ -64,12 +65,12 @@ public class Assert
         soma = 0;
 
         for (int i = 0; i < 10; i++)
-            soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
+            soma += (tempCpf[i] - '0') * multiplicador2[i];
 
         resto = soma % 11;
         int digito2 = resto < 2 ? 0 : 11 - resto;
 
-        if (digito1 != int.Parse(cpf[9].ToString()) || digito2 != int.Parse(cpf[10].ToString()))
+        if (digito1 != (cpf[9] - '0') || digito2 != (cpf[10] - '0'))
             throw new AssertException("CPF inválido.");
     }
 

@@ -27,6 +27,12 @@ public class PgFuncionarioRepository : IFuncionarioRepository
         return entity == null ? null : PgFuncionarioMapper.ToBO(entity);
     }
 
+    public FuncionarioBO FindByCPF(string cpf)
+    {
+        PgFuncionarioEntity? entity = _context.Funcionarios.FirstOrDefault(e => e.Cpf == cpf);
+        return entity == null ? null : PgFuncionarioMapper.ToBO(entity);
+    }
+
     public FuncionarioBO Create(FuncionarioBO entity)
     {
         PgFuncionarioEntity pgEntity = PgFuncionarioMapper.ToEntity(entity);
