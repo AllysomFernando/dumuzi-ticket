@@ -19,62 +19,40 @@ public class TicketController : Controller
     [HttpGet]
     public ActionResult<List<TicketDTO>> Get()
     {
-        try
-        {
+
             List<TicketDTO> res = _ticketService.FindAll();
             return Ok(res);
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Erro ao buscar todos os tickets");
-            return StatusCode(500, "Ocorreu um erro interno ao processar a solicitação");
-        }
     }
 
     [HttpGet("{id}")]
     public ActionResult<TicketDTO> GetById(int id)
     {
-        try
-        {
+
             TicketDTO? res = _ticketService.FindById(id);
             if (res == null)
             {
                 return NotFound($"Ticket com ID {id} não encontrado");
             }
             return Ok(res);
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Erro ao buscar ticket por ID: {Id}", id);
-            return StatusCode(500, "Ocorreu um erro interno ao processar a solicitação");
-        }
+
     }
 
     [HttpGet("funcionario/{id}")]
     public ActionResult<TicketDTO> GetByFuncionarioId(int id)
     {
-        try
-        {
+
             TicketDTO? res = _ticketService.FindByFuncionarioId(id);
             if (res == null)
             {
                 return NotFound($"Ticket para o funcionário com ID {id} não encontrado");
             }
             return Ok(res);
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Erro ao buscar ticket por ID do funcionário: {Id}", id);
-            return StatusCode(500, "Ocorreu um erro interno ao processar a solicitação");
-        }
-
     }
 
     [HttpPost]
     public ActionResult<TicketDTO> Create([FromBody] CreateTicketDTO ticket)
     {
-        try
-        {
+
             if (ticket == null)
             {
                 return BadRequest("Dados do ticket inválidos");
@@ -82,19 +60,13 @@ public class TicketController : Controller
 
             TicketDTO res = _ticketService.Create(ticket);
             return CreatedAtAction(nameof(GetById), new { id = res.Id }, res);
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Erro ao criar ticket");
-            return StatusCode(500, "Ocorreu um erro interno ao processar a solicitação");
-        }
+
     }
 
     [HttpPut("{id}")]
     public ActionResult<TicketDTO> Update(int id, [FromBody] UpdateTicketDTO ticket)
     {
-        try
-        {
+
             if (ticket == null)
             {
                 return BadRequest("Dados do ticket inválidos");
@@ -106,12 +78,5 @@ public class TicketController : Controller
             }
 
             return Ok(res);
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Erro ao atualizar ticket com ID: {Id}", id);
-            return StatusCode(500, "Ocorreu um erro interno ao processar a solicitação");
-        }
-
     }
 }

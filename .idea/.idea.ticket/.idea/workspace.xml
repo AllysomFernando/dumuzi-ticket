@@ -9,11 +9,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d1c2da-e8d2-4665-af5d-76dbc684cef3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Presentation/Middleware/ApiExceptionFilter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/UpdateTicketUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/UpdateTicketUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Entities/PgTicketEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Entities/PgTicketEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgFuncionarioRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgFuncionarioRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/DumuziTickets.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/DumuziTickets.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Assertions/Assert.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Assertions/Assert.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/FuncionarioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/FuncionarioController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +78,7 @@
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/FuncionarioController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/TicketController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Presentation/Middleware/ApiExceptionFilter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3bd4df5aff92cabbc4d630be64227073db1b8539b3a1e47786b4b189d7cdb7/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4b21fc3f8a3abb5d25f06c622276fbec0fd3932f169cc6af520bf5abc6a46b4/DbSet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/71f8a5297672ad56962c6af62f7241a092ad7d95eaee4ef564601be5d8e37b38/Int32.cs" root0="FORCE_HIGHLIGHTING" />
@@ -102,7 +104,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.DumuziTickets: http.executor": "Debug",
+    ".NET Launch Settings Profile.DumuziTickets: http.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -177,7 +179,7 @@
       <workItem from="1756816926770" duration="1941000" />
       <workItem from="1756818881483" duration="11156000" />
       <workItem from="1756839506291" duration="8760000" />
-      <workItem from="1756901567053" duration="11636000" />
+      <workItem from="1756901567053" duration="12473000" />
     </task>
     <task id="LOCAL-00001" summary="fix: fixing the EnumSituacao and removing the createdAt to follow the bussines rule">
       <option name="closed" value="true" />
@@ -275,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756916021419</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix: fixing update logic">
+      <option name="closed" value="true" />
+      <created>1756917103174</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1756917103174</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +307,8 @@
     <MESSAGE value="feat: implementing the update ticket" />
     <MESSAGE value="fix: fixing the situacao validation" />
     <MESSAGE value="feat: implementing the find ticket by funcionario id" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implementing the find ticket by funcionario id" />
+    <MESSAGE value="fix: fixing update logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fixing update logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

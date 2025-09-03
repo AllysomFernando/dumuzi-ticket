@@ -27,18 +27,18 @@ public class Assert
     public static void CpfIsValid(string cpf)
     {
         if (string.IsNullOrWhiteSpace(cpf))
-            throw new AssertException("CPF não pode ser vazio.");
+            throw new BusinessExecption("CPF não pode ser vazio.");
 
         cpf = cpf.Trim().Replace(".", "").Replace("-", "");
 
         if (!cpf.All(char.IsDigit))
-            throw new AssertException("CPF deve conter apenas números.");
+            throw new BusinessExecption("CPF deve conter apenas números.");
 
         if (cpf.Length != 11)
-            throw new AssertException("CPF deve ter 11 dígitos.");
+            throw new BusinessExecption("CPF deve ter 11 dígitos.");
 
         if (cpf.All(c => c == cpf[0]))
-            throw new AssertException("CPF inválido.");
+            throw new BusinessExecption("CPF inválido.");
 
         string[] cpfsInvalidos = {
             "00000000000", "11111111111", "22222222222", "33333333333",
@@ -71,7 +71,7 @@ public class Assert
         int digito2 = resto < 2 ? 0 : 11 - resto;
 
         if (digito1 != (cpf[9] - '0') || digito2 != (cpf[10] - '0'))
-            throw new AssertException("CPF inválido.");
+            throw new BusinessExecption("CPF inválido.");
     }
 
 
