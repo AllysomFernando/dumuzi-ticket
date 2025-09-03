@@ -11,7 +11,7 @@ public static class PgTicketMapper
     {
             return new PgTicketEntity(
                 bo.Quantidade,
-                PgFuncionarioMapper.ToEntity(bo.Funcionario),
+                bo.Funcionario.Id,
                 (Situacao)bo.Situacao,
                 bo.UpdatedAt);
     }

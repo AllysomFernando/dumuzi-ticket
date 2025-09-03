@@ -13,14 +13,13 @@ public class PgTicketEntity
     [Required] public Situacao Situacao { get; private set; }
     [Required] public DateTime UpdatedAt { get; private set; }
 
-    public PgTicketEntity(int quantidade, PgFuncionarioEntity funcionario, Situacao situacao, DateTime updatedAt)
+    public PgTicketEntity(int quantidade, int funcionarioId, Situacao situacao, DateTime updatedAt)
     {
         Quantidade = quantidade;
-        Funcionario = funcionario;
+        FuncionarioId = funcionarioId;
         Situacao = situacao;
         UpdatedAt = updatedAt;
     }
-
     public PgTicketEntity()
     {
     }
