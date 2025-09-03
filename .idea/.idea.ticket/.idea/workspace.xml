@@ -9,9 +9,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d1c2da-e8d2-4665-af5d-76dbc684cef3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/UpdateTicketDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Entities/PgTicketEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Entities/PgTicketEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Mappers/PgTicketMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Mappers/PgTicketMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Implementation/TicketService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Implementation/TicketService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Interfaces/ITicket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Interfaces/ITicket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/FindTicketUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/FindTicketUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/UpdateTicketUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/UpdateTicketUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/TicketController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/TicketController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +47,7 @@
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/CreateTicketDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/FuncionarioDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/TicketDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/UpdateTicketDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/ENUM/Situacao.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/AbstractEntityBO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/FuncionarioBO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -99,7 +105,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.DumuziTickets: http.executor": "Debug",
+    ".NET Launch Settings Profile.DumuziTickets: http.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -174,7 +180,7 @@
       <workItem from="1756816926770" duration="1941000" />
       <workItem from="1756818881483" duration="11156000" />
       <workItem from="1756839506291" duration="8760000" />
-      <workItem from="1756901567053" duration="6362000" />
+      <workItem from="1756901567053" duration="7776000" />
     </task>
     <task id="LOCAL-00001" summary="fix: fixing the EnumSituacao and removing the createdAt to follow the bussines rule">
       <option name="closed" value="true" />
@@ -240,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756907617374</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix: fixing the entity and the mapper">
+      <option name="closed" value="true" />
+      <created>1756908023398</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1756908023398</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +272,8 @@
     <MESSAGE value="feat: fix the update and how I recive the ID" />
     <MESSAGE value="feat: implementing the TicketController.cs" />
     <MESSAGE value="feat: injeting the funcionarioRepository to Ticket" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: injeting the funcionarioRepository to Ticket" />
+    <MESSAGE value="fix: fixing the entity and the mapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fixing the entity and the mapper" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -302,43 +317,17 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs</url>
-          <line>22</line>
-          <properties documentPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs" containingFunctionPresentation="Method 'Execute'">
+          <url>file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/FindTicketUseCase.cs</url>
+          <line>19</line>
+          <properties documentPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/FindTicketUseCase.cs" containingFunctionPresentation="Method 'Execute'">
             <startOffsets>
-              <option value="714" />
+              <option value="505" />
             </startOffsets>
             <endOffsets>
-              <option value="795" />
+              <option value="557" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs</url>
-          <line>32</line>
-          <properties documentPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs" containingFunctionPresentation="Method 'Execute'">
-            <startOffsets>
-              <option value="1094" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1128" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs</url>
-          <line>30</line>
-          <properties documentPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" containingFunctionPresentation="Method 'Create'">
-            <startOffsets>
-              <option value="1036" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1094" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="23" />
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -71,7 +71,7 @@ public class TicketController : Controller
     }
 
     [HttpPut("{id}")]
-    public ActionResult<TicketDTO> Update(int id, [FromBody] TicketDTO ticket)
+    public ActionResult<TicketDTO> Update(int id, [FromBody] UpdateTicketDTO ticket)
     {
         try
         {

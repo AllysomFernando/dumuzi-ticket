@@ -18,7 +18,7 @@ public class FindTicketUseCase
     public TicketDTO Execute(int ticketId)
     {
         TicketBO? bo = _ticketRepository.FindById(ticketId);
-        Assert.IsNull(bo, "ticket não encontrado");
+        Assert.IsNotNull(bo, "ticket não encontrado");
         return TicketMapper.ToDTO(bo);
     }
 }

@@ -3,6 +3,7 @@ using DumuziTickets.Domain.Repository;
 using DumuziTickets.Infra.Persistence.PgSQL.Config;
 using DumuziTickets.Infra.Persistence.PgSQL.Entities;
 using DumuziTickets.Infra.Persistence.PgSQL.Mappers;
+using Microsoft.EntityFrameworkCore;
 
 namespace DumuziTickets.Infra.Persistence.PgSQL.Repository;
 
@@ -16,15 +17,22 @@ public class PgTicketRepository : ITicketRepository
         }
         public IEnumerable<TicketBO> FindAll()
         {
-                IEnumerable<PgTicketEntity> entities = _context.Tickets.ToList();
+                var entities = _context.Tickets
+                        .Include(t => t.Funcionario)
+                        .ToList();
+
                 return entities.Select(PgTicketMapper.ToBO);
         }
 
         public TicketBO FindById(int id)
         {
-                PgTicketEntity? entity = _context.Tickets.FirstOrDefault(e => e.Id == id);
+                var entity = _context.Tickets
+                        .Include(t => t.Funcionario)
+                        .FirstOrDefault(e => e.Id == id);
+
                 return entity == null ? null : PgTicketMapper.ToBO(entity);
         }
+
 
         public TicketBO Create(TicketBO entity)
         {

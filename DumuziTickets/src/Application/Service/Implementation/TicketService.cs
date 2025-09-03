@@ -34,9 +34,9 @@ public class TicketService : ITicketService
         return useCase.Execute(ticket);
     }
 
-    public TicketDTO Update(int id, TicketDTO ticket)
+    public TicketDTO Update(int id, UpdateTicketDTO ticket)
     {
-        UpdateTicketUseCase useCase = new UpdateTicketUseCase(_ticketRepository);
+        UpdateTicketUseCase useCase = new UpdateTicketUseCase(_ticketRepository, _funcionarioRepository);
         return useCase.Execute(id, ticket);
     }
 
