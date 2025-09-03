@@ -21,6 +21,7 @@ public class CreateFuncionarioUseCase
         bo.AtualizarData();
         var exists = _funcionarioRepository.FindByCPF(bo.Cpf);
         Assert.IsNull(exists, "Não é possivel cadastrar com esse CPF, pois já consta em nosso sistema.");
+        bo.Validate("Funcionário");
         bo = _funcionarioRepository.Create(bo);
 
         return FuncionarioMapper.ToDTO(bo);

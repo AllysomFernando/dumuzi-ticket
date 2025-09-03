@@ -9,14 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d1c2da-e8d2-4665-af5d-76dbc684cef3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/UpdateTicketDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Implementation/TicketService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Implementation/TicketService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Interfaces/ITicket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Interfaces/ITicket.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/FindTicketUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/FindTicketUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/UpdateTicketUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/UpdateTicketUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/TicketController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/TicketController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/AbstractEntityBO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/AbstractEntityBO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/CreateFuncionarioUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/CreateFuncionarioUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +177,7 @@
       <workItem from="1756816926770" duration="1941000" />
       <workItem from="1756818881483" duration="11156000" />
       <workItem from="1756839506291" duration="8760000" />
-      <workItem from="1756901567053" duration="7776000" />
+      <workItem from="1756901567053" duration="8262000" />
     </task>
     <task id="LOCAL-00001" summary="fix: fixing the EnumSituacao and removing the createdAt to follow the bussines rule">
       <option name="closed" value="true" />
@@ -254,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756908023398</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: implementing the update ticket">
+      <option name="closed" value="true" />
+      <created>1756909371315</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1756909371316</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +278,8 @@
     <MESSAGE value="feat: implementing the TicketController.cs" />
     <MESSAGE value="feat: injeting the funcionarioRepository to Ticket" />
     <MESSAGE value="fix: fixing the entity and the mapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fixing the entity and the mapper" />
+    <MESSAGE value="feat: implementing the update ticket" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: implementing the update ticket" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -290,32 +296,6 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/FuncionarioBO.cs</url>
-          <line>31</line>
-          <properties documentPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/FuncionarioBO.cs" containingFunctionPresentation="Method 'AtualizarFuncionario'">
-            <startOffsets>
-              <option value="725" />
-            </startOffsets>
-            <endOffsets>
-              <option value="726" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/AbstractEntityBO.cs</url>
-          <line>40</line>
-          <properties documentPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/AbstractEntityBO.cs" containingFunctionPresentation="Method 'AtualizarData'">
-            <startOffsets>
-              <option value="923" />
-            </startOffsets>
-            <endOffsets>
-              <option value="952" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/FindTicketUseCase.cs</url>
           <line>19</line>

@@ -30,6 +30,7 @@ public class CreateTicketUseCase
             situacao: EnumSituacao.A,
             updatedAt: DateTime.UtcNow
         );
+        bo.Validate("Ticket");
         bo = _ticketRepository.Create(bo);
         return TicketMapper.ToDTO(bo);
     }

@@ -14,7 +14,6 @@ public abstract class AbstractEntityBO<K>
                 UpdatedAt = updatedAt;
                 Situacao = situacao;
 
-                Validate();
         }
 
         public K Id
@@ -41,8 +40,8 @@ public abstract class AbstractEntityBO<K>
                 _updatedAt = DateTime.UtcNow;
         }
 
-        private void Validate()
+        public void Validate(string tipo)
         {
-                Assert.IsFalse(Situacao == EnumSituacao.I, "Não pode criar um funcionário já inativo.");
+                Assert.IsFalse(Situacao == EnumSituacao.I, $"Não pode criar o {tipo} já inativo.");
         }
 }

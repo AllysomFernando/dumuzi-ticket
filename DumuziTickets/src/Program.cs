@@ -38,6 +38,7 @@ app.UseExceptionHandler(errorApp =>
             DbUpdateException => 400,
             KeyNotFoundException => 404,
             DumuziTickets.Domain.Exceptions.AssertException => 400,
+            DumuziTickets.Domain.Exceptions.BusinessExecption => 400,
             _ => 500
         };
 
