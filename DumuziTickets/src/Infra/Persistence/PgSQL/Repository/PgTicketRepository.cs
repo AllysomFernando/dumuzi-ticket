@@ -1,7 +1,9 @@
+using DumuziTickets.domain;
 using DumuziTickets.domain.entities;
 using DumuziTickets.Domain.Repository;
 using DumuziTickets.Infra.Persistence.PgSQL.Config;
 using DumuziTickets.Infra.Persistence.PgSQL.Entities;
+using DumuziTickets.Infra.Persistence.PgSQL.Enum;
 using DumuziTickets.Infra.Persistence.PgSQL.Mappers;
 using Microsoft.EntityFrameworkCore;
 
@@ -52,8 +54,16 @@ public class PgTicketRepository : ITicketRepository
 
         public TicketBO Update(int id, TicketBO entity)
         {
-                PgTicketEntity pgEntity = PgTicketMapper.ToEntity(entity);
-                _context.Tickets.Update(pgEntity);
+                PgTicketEntity pgEntity = _context.Tickets.FirstOrDefault(e => e.Id == id);
+                if (pgEntity == null)
+                {
+                        throw new Exception("Ticket não encontrado.");
+                }
+                pgEntity.Id = entity.Id;
+                pgEntity.FuncionarioId = entity.Funcionario.Id;
+                pgEntity.Situacao = (Situacao)entity.Situacao;
+                pgEntity.Quantidade = entity.Quantidade;
+
                 _context.SaveChanges();
                 return PgTicketMapper.ToBO(pgEntity);
         }

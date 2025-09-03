@@ -20,6 +20,9 @@ public class UpdateTicketUseCase
 
     public TicketDTO Execute(int id, UpdateTicketDTO dto)
     {
+        TicketBO existingTicket = _ticketRepository
+            .FindById(id);
+        Assert.IsNotNull(existingTicket, "Ticket não encontrado");
         FuncionarioBO funcionarioBo = _funcionarioRepository
             .FindById(dto.FuncionarioId);
         Assert.IsNotNull(funcionarioBo, "Funcionário não encontrado");
@@ -29,7 +32,7 @@ public class UpdateTicketUseCase
             quantidade: dto.Quantidade,
             funcionario: funcionarioBo,
             situacao: dto.Situacao,
-            updatedAt: DateTime.UtcNow
+            updatedAt: existingTicket.UpdatedAt
         );
         bo = _ticketRepository.Update(id, bo);
         return TicketMapper.ToDTO(bo);

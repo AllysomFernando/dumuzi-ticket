@@ -6,12 +6,12 @@ namespace DumuziTickets.Infra.Persistence.PgSQL.Entities;
 
 public class PgTicketEntity
 {
-    [Key] public int Id { get; private set; }
-    [Required] public int FuncionarioId { get; private set; }
-    [ForeignKey(nameof(FuncionarioId))] public PgFuncionarioEntity Funcionario { get; private set; }
-    [Required] public int Quantidade { get; private set; }
-    [Required] public Situacao Situacao { get; private set; }
-    [Required] public DateTime UpdatedAt { get; private set; }
+    [Key] public int Id { get; set; }
+    [Required] public int FuncionarioId { get; set; }
+    [ForeignKey(nameof(FuncionarioId))] public PgFuncionarioEntity Funcionario { get;  set; }
+    [Required] public int Quantidade { get; set; }
+    [Required] public Situacao Situacao { get;  set; }
+    [Required] public DateTime UpdatedAt { get; set; }
 
     public PgTicketEntity(int quantidade, int funcionarioId, Situacao situacao, DateTime updatedAt)
     {

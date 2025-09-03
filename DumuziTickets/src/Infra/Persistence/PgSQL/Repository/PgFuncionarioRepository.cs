@@ -49,6 +49,7 @@ public class PgFuncionarioRepository : IFuncionarioRepository
         {
             throw new Exception("Funcionario não encontrado.");
         }
+        pgEntity.Id = id;
         pgEntity.Nome = entity.Nome;
         pgEntity.Situacao = (Situacao)entity.Situacao;
         pgEntity.UpdatedAt = entity.UpdatedAt;
