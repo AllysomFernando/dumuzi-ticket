@@ -1,3 +1,4 @@
+using DumuziTickets.Domain.Assertions;
 using DumuziTickets.Domain.Dto;
 using DumuziTickets.domain.entities;
 using DumuziTickets.Domain.Exceptions;
@@ -18,12 +19,7 @@ public class UpdateFuncionarioUseCase
     public FuncionarioDTO Execute(int id, FuncionarioDTO dto)
     {
         FuncionarioBO bo = _funcionarioRepository.FindById(id);
-
-        if (bo == null)
-        {
-            throw new Exception("Funcionario não encontrado.");
-        }
-
+        Assert.IsNotNull(bo, "Funcionário não encontrado");
         bo.AtualizarFuncionario(FuncionarioMapper.ToBO(dto));
         bo = _funcionarioRepository.Update(id, bo);
         return FuncionarioMapper.ToDTO(bo);

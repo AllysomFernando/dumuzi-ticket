@@ -51,7 +51,7 @@ public class TicketController : Controller
     }
 
     [HttpPost]
-    public ActionResult<TicketDTO> Create([FromBody] TicketDTO ticket)
+    public ActionResult<TicketDTO> Create([FromBody] CreateTicketDTO ticket)
     {
         try
         {

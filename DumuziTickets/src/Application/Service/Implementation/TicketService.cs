@@ -8,10 +8,12 @@ namespace DumuziTickets.Application.Service.Implementation;
 public class TicketService : ITicketService
 {
     private readonly ITicketRepository _ticketRepository;
+    private readonly IFuncionarioRepository _funcionarioRepository;
 
-    public TicketService(ITicketRepository ticketRepository)
+    public TicketService(ITicketRepository ticketRepository, IFuncionarioRepository funcionarioRepository)
     {
         _ticketRepository = ticketRepository;
+        _funcionarioRepository = funcionarioRepository;
     }
 
     public List<TicketDTO> FindAll()
@@ -26,9 +28,9 @@ public class TicketService : ITicketService
         return useCase.Execute(id);
     }
 
-    public TicketDTO Create(TicketDTO ticket)
+    public TicketDTO Create(CreateTicketDTO ticket)
     {
-        CreateTicketUseCase useCase = new CreateTicketUseCase(_ticketRepository);
+        CreateTicketUseCase useCase = new CreateTicketUseCase(_ticketRepository, _funcionarioRepository);
         return useCase.Execute(ticket);
     }
 
