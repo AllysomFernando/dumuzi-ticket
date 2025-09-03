@@ -33,6 +33,14 @@ public class PgTicketRepository : ITicketRepository
                 return entity == null ? null : PgTicketMapper.ToBO(entity);
         }
 
+        public TicketBO? FindByFuncionarioId(int funcionarioId)
+        {
+                var entity = _context.Tickets
+                        .Include(t => t.Funcionario)
+                        .FirstOrDefault(e => e.FuncionarioId == funcionarioId);
+
+                return entity == null ? null : PgTicketMapper.ToBO(entity);
+        }
 
         public TicketBO Create(TicketBO entity)
         {

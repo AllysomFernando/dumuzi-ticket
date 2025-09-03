@@ -6,6 +6,7 @@ public interface ITicketService
 {
     List<TicketDTO> FindAll();
     TicketDTO? FindById(int id);
+    TicketDTO? FindByFuncionarioId(int funcionarioId);
     TicketDTO Create(CreateTicketDTO ticket);
     TicketDTO Update(int id, UpdateTicketDTO ticket);
 }

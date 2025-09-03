@@ -9,11 +9,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d1c2da-e8d2-4665-af5d-76dbc684cef3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/FindTicketByFuncionarioIdUseCase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/AbstractEntityBO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Entities/AbstractEntityBO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/CreateFuncionarioUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/CreateFuncionarioUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Implementation/TicketService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Implementation/TicketService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Interfaces/ITicket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Interfaces/ITicket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Repository/ITicketRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Repository/ITicketRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/TicketController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/TicketController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +179,7 @@
       <workItem from="1756816926770" duration="1941000" />
       <workItem from="1756818881483" duration="11156000" />
       <workItem from="1756839506291" duration="8760000" />
-      <workItem from="1756901567053" duration="8262000" />
+      <workItem from="1756901567053" duration="10596000" />
     </task>
     <task id="LOCAL-00001" summary="fix: fixing the EnumSituacao and removing the createdAt to follow the bussines rule">
       <option name="closed" value="true" />
@@ -259,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756909371316</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fix: fixing the situacao validation">
+      <option name="closed" value="true" />
+      <created>1756909920272</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1756909920272</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +289,8 @@
     <MESSAGE value="feat: injeting the funcionarioRepository to Ticket" />
     <MESSAGE value="fix: fixing the entity and the mapper" />
     <MESSAGE value="feat: implementing the update ticket" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implementing the update ticket" />
+    <MESSAGE value="fix: fixing the situacao validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: fixing the situacao validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

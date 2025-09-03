@@ -50,6 +50,26 @@ public class TicketController : Controller
         }
     }
 
+    [HttpGet("funcionario/{id}")]
+    public ActionResult<TicketDTO> GetByFuncionarioId(int id)
+    {
+        try
+        {
+            TicketDTO? res = _ticketService.FindByFuncionarioId(id);
+            if (res == null)
+            {
+                return NotFound($"Ticket para o funcionário com ID {id} não encontrado");
+            }
+            return Ok(res);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Erro ao buscar ticket por ID do funcionário: {Id}", id);
+            return StatusCode(500, "Ocorreu um erro interno ao processar a solicitação");
+        }
+
+    }
+
     [HttpPost]
     public ActionResult<TicketDTO> Create([FromBody] CreateTicketDTO ticket)
     {
