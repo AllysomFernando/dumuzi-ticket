@@ -27,6 +27,7 @@
       <Compile Remove="src\Infra\Persistence\PgSQL\Migrations\**" />
       <Compile Remove="src\Infra\Persistence\PgSQL\Config\PostgresDbContextFabric.cs" />
       <Compile Remove="src\Presentation\Middleware\**" />
+      <Compile Remove="src\Domain\Services\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -36,6 +37,7 @@
       <EmbeddedResource Remove="src\Application\UseCase\**" />
       <EmbeddedResource Remove="src\Infra\Persistence\PgSQL\Migrations\**" />
       <EmbeddedResource Remove="src\Presentation\Middleware\**" />
+      <EmbeddedResource Remove="src\Domain\Services\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -45,6 +47,7 @@
       <Content Remove="src\Application\UseCase\**" />
       <Content Remove="src\Infra\Persistence\PgSQL\Migrations\**" />
       <Content Remove="src\Presentation\Middleware\**" />
+      <Content Remove="src\Domain\Services\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -54,6 +57,7 @@
       <None Remove="src\Application\UseCase\**" />
       <None Remove="src\Infra\Persistence\PgSQL\Migrations\**" />
       <None Remove="src\Presentation\Middleware\**" />
+      <None Remove="src\Domain\Services\**" />
     </ItemGroup>
 
 </Project>

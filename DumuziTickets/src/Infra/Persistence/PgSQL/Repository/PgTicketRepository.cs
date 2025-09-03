@@ -45,6 +45,15 @@ public class PgTicketRepository : ITicketRepository
                 return entities.Select(PgTicketMapper.ToBO);
         }
 
+        public IEnumerable<TicketBO> FindByFuncionarioRange(int funcionarioId, DateTime dataInicial, DateTime dataFinal)
+        {
+                var entities = _context.Tickets
+                        .Include(t => t.Funcionario)
+                        .Where(t => t.FuncionarioId == funcionarioId && t.UpdatedAt >= dataInicial && t.UpdatedAt <= dataFinal)
+                        .ToList();
+
+                return entities.Select(PgTicketMapper.ToBO);
+        }
         public TicketBO Create(TicketBO entity)
         {
                 PgTicketEntity pgEntity = PgTicketMapper.ToEntity(entity);

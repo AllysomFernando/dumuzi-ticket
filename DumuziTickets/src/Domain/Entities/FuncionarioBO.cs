@@ -1,9 +1,8 @@
 using DumuziTickets.Domain.Assertions;
-using DumuziTickets.Domain.Services;
 
 namespace DumuziTickets.domain.entities;
 
-public class FuncionarioBO : AbstractEntityBO<int>, IDeletableEntity
+public class FuncionarioBO : AbstractEntityBO<int>
 {
     private string _nome;
     private string _cpf;

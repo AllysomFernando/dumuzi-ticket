@@ -28,6 +28,12 @@ public class TicketService : ITicketService
         return useCase.Execute(id);
     }
 
+    public List<TicketDTO> FindByFuncionarioRange(int funcionarioId, DateTime dataInicial, DateTime dataFinal)
+    {
+        FindTicketByFuncionarioRange useCase = new FindTicketByFuncionarioRange(_ticketRepository);
+        return useCase.Execute(funcionarioId, dataInicial, dataFinal).ToList();
+    }
+
     public List<TicketDTO> FindByFuncionarioId(int funcionarioId)
     {
         FindTicketByFuncioarioIdUseCase useCase = new FindTicketByFuncioarioIdUseCase(_ticketRepository);

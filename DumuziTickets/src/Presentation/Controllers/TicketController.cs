@@ -49,6 +49,17 @@ public class TicketController : Controller
             return Ok(res);
     }
 
+    [HttpGet("funcionario/{id}/{dataInicial}/{dataFinal}")]
+    public ActionResult<TicketDTO> GetByFuncionarioIdRange(int id, DateTime dataInicial, DateTime dataFinal)
+    {
+        List<TicketDTO> res = _ticketService.FindByFuncionarioRange(id, dataInicial, dataFinal);
+        if (res == null)
+        {
+            return NotFound($"Ticket para o funcionário com ID {id} no intervalo de {dataInicial} a {dataFinal} não encontrado");
+        }
+        return Ok(res);
+    }
+
     [HttpPost]
     public ActionResult<TicketDTO> Create([FromBody] CreateTicketDTO ticket)
     {

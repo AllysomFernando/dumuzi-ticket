@@ -6,7 +6,8 @@ public interface ITicketService
 {
     List<TicketDTO> FindAll();
     TicketDTO? FindById(int id);
-   List<TicketDTO> FindByFuncionarioId(int funcionarioId);
+    List<TicketDTO> FindByFuncionarioId(int funcionarioId);
+    List<TicketDTO> FindByFuncionarioRange(int funcionarioId, DateTime dataInicial, DateTime dataFinal);
     TicketDTO Create(CreateTicketDTO ticket);
     TicketDTO Update(int id, UpdateTicketDTO ticket);
 }
