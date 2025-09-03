@@ -41,7 +41,7 @@ public class TicketController : Controller
     public ActionResult<TicketDTO> GetByFuncionarioId(int id)
     {
 
-            TicketDTO? res = _ticketService.FindByFuncionarioId(id);
+            List<TicketDTO> res = _ticketService.FindByFuncionarioId(id);
             if (res == null)
             {
                 return NotFound($"Ticket para o funcionário com ID {id} não encontrado");

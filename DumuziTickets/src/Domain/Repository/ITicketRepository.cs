@@ -4,5 +4,5 @@ namespace DumuziTickets.Domain.Repository;
 
 public interface ITicketRepository : IRepository<TicketBO, int>
 {
-    TicketBO? FindByFuncionarioId(int funcionarioId);
+    IEnumerable<TicketBO> FindByFuncionarioId(int funcionarioId);
 }

@@ -15,10 +15,19 @@ public class FindTicketByFuncioarioIdUseCase
         _ticketRepository = ticketRepository;
     }
 
-    public TicketDTO Execute(int funcionarioId)
+    public IEnumerable<TicketDTO> Execute(int funcionarioId)
     {
-        TicketBO? bo = _ticketRepository.FindByFuncionarioId(funcionarioId);
+        IEnumerable<TicketBO> bo = _ticketRepository.FindByFuncionarioId(funcionarioId);
         Assert.IsNotNull(bo, $"ticket não encontrado pelo funcionarioId{funcionarioId}");
-        return TicketMapper.ToDTO(bo);
+
+        var ticketsDto = bo.Select(bo => new TicketDTO
+        {
+            Id = bo.Id,
+            Funcionario = FuncionarioMapper.ToDTO(bo.Funcionario),
+            Quantidade = bo.Quantidade,
+            Situacao = bo.Situacao,
+            UpdatedAt = bo.UpdatedAt,
+        });
+        return ticketsDto;
     }
 }

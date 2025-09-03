@@ -28,10 +28,10 @@ public class TicketService : ITicketService
         return useCase.Execute(id);
     }
 
-    public TicketDTO? FindByFuncionarioId(int funcionarioId)
+    public List<TicketDTO> FindByFuncionarioId(int funcionarioId)
     {
         FindTicketByFuncioarioIdUseCase useCase = new FindTicketByFuncioarioIdUseCase(_ticketRepository);
-        return useCase.Execute(funcionarioId);
+        return useCase.Execute(funcionarioId).ToList();
     }
 
     public TicketDTO Create(CreateTicketDTO ticket)
