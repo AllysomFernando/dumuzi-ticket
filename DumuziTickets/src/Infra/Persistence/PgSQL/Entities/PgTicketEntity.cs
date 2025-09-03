@@ -4,6 +4,7 @@ using DumuziTickets.Infra.Persistence.PgSQL.Enum;
 
 namespace DumuziTickets.Infra.Persistence.PgSQL.Entities;
 
+[Table("ticket")]
 public class PgTicketEntity
 {
     [Key] public int Id { get; set; }
@@ -11,7 +12,7 @@ public class PgTicketEntity
     [ForeignKey(nameof(FuncionarioId))] public PgFuncionarioEntity Funcionario { get;  set; }
     [Required] public int Quantidade { get; set; }
     [Required] public Situacao Situacao { get;  set; }
-    [Required] public DateTime UpdatedAt { get; set; }
+    [Required][Column(TypeName = "timestamp")] public DateTime UpdatedAt { get; set; }
 
     public PgTicketEntity(int quantidade, int funcionarioId, Situacao situacao, DateTime updatedAt)
     {

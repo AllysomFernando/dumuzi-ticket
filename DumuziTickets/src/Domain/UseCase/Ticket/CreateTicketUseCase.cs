@@ -28,8 +28,9 @@ public class CreateTicketUseCase
             quantidade: dto.Quantidade,
             funcionario: funcionarioBo,
             situacao: EnumSituacao.A,
-            updatedAt: DateTime.UtcNow
+            updatedAt: DateTime.Now
         );
+
         bo.Validate("Ticket");
         bo = _ticketRepository.Create(bo);
         return TicketMapper.ToDTO(bo);

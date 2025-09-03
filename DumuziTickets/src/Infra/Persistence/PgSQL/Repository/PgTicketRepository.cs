@@ -48,14 +48,12 @@ public class PgTicketRepository : ITicketRepository
 
         public IEnumerable<TicketBO> FindByFuncionarioRange(int funcionarioId, DateTime dataInicial, DateTime dataFinal)
         {
-                var inicio = DateTime.SpecifyKind(dataInicial.Date, DateTimeKind.Utc);
-                var fim = DateTime.SpecifyKind(dataFinal.Date.AddDays(1).AddTicks(-1), DateTimeKind.Utc);
                 var entities = _context.Tickets
                         .Include(t => t.Funcionario)
                         .Where(t =>
                                 t.FuncionarioId == funcionarioId &&
-                                t.UpdatedAt >= inicio &&
-                                t.UpdatedAt <= fim
+                                t.UpdatedAt >= dataInicial &&
+                                t.UpdatedAt <= dataFinal
                         )
                         .ToList();
 
@@ -64,6 +62,7 @@ public class PgTicketRepository : ITicketRepository
         public TicketBO Create(TicketBO entity)
         {
                 PgTicketEntity pgEntity = PgTicketMapper.ToEntity(entity);
+                pgEntity.UpdatedAt.ToUniversalTime();
                 _context.Tickets.Add(pgEntity);
                 _context.SaveChanges();
                 return PgTicketMapper.ToBO(pgEntity);

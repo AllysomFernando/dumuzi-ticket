@@ -37,7 +37,7 @@ public abstract class AbstractEntityBO<K>
 
         public void AtualizarData()
         {
-                _updatedAt = DateTime.UtcNow;
+                _updatedAt = DateTime.Now;
         }
 
         public void Validate(string tipo)

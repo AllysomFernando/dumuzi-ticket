@@ -13,7 +13,8 @@ public class PgFuncionarioEntity
     [Required] public string Nome { get; set; }
     [Required] public string Cpf { get; set; }
     [Required] public Situacao Situacao { get; set; }
-    [Required] public DateTime UpdatedAt { get; set; }
+
+    [Required][Column(TypeName = "timestamp")] public DateTime UpdatedAt { get; set; }
 
     public PgFuncionarioEntity(string nome, string cpf, Situacao situacao, DateTime updatedAt)
     {
