@@ -1,3 +1,4 @@
+using DumuziTickets.Domain.Assertions;
 using DumuziTickets.domain.entities;
 using DumuziTickets.Domain.Repository;
 using DumuziTickets.Infra.Persistence.PgSQL.Config;
@@ -45,10 +46,7 @@ public class PgFuncionarioRepository : IFuncionarioRepository
     public FuncionarioBO Update(int id, FuncionarioBO entity)
     {
         PgFuncionarioEntity pgEntity = _context.Funcionarios.FirstOrDefault(e => e.Id == id);
-        if (pgEntity == null)
-        {
-            throw new Exception("Funcionario não encontrado.");
-        }
+        Assert.IsNull(pgEntity, "Funcionario não encontrado.");
         pgEntity.Id = id;
         pgEntity.Nome = entity.Nome;
         pgEntity.Situacao = (Situacao)entity.Situacao;

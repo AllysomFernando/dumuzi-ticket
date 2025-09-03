@@ -1,4 +1,5 @@
 using DumuziTickets.domain;
+using DumuziTickets.Domain.Assertions;
 using DumuziTickets.domain.entities;
 using DumuziTickets.Domain.Repository;
 using DumuziTickets.Infra.Persistence.PgSQL.Config;
@@ -47,9 +48,15 @@ public class PgTicketRepository : ITicketRepository
 
         public IEnumerable<TicketBO> FindByFuncionarioRange(int funcionarioId, DateTime dataInicial, DateTime dataFinal)
         {
+                var inicio = DateTime.SpecifyKind(dataInicial.Date, DateTimeKind.Utc);
+                var fim = DateTime.SpecifyKind(dataFinal.Date.AddDays(1).AddTicks(-1), DateTimeKind.Utc);
                 var entities = _context.Tickets
                         .Include(t => t.Funcionario)
-                        .Where(t => t.FuncionarioId == funcionarioId && t.UpdatedAt >= dataInicial && t.UpdatedAt <= dataFinal)
+                        .Where(t =>
+                                t.FuncionarioId == funcionarioId &&
+                                t.UpdatedAt >= inicio &&
+                                t.UpdatedAt <= fim
+                        )
                         .ToList();
 
                 return entities.Select(PgTicketMapper.ToBO);
@@ -65,10 +72,7 @@ public class PgTicketRepository : ITicketRepository
         public TicketBO Update(int id, TicketBO entity)
         {
                 PgTicketEntity pgEntity = _context.Tickets.FirstOrDefault(e => e.Id == id);
-                if (pgEntity == null)
-                {
-                        throw new Exception("Ticket não encontrado.");
-                }
+                Assert.IsNull(pgEntity, "Ticket não encontrado.");
                 pgEntity.Id = entity.Id;
                 pgEntity.FuncionarioId = entity.Funcionario.Id;
                 pgEntity.Situacao = (Situacao)entity.Situacao;

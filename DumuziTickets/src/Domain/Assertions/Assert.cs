@@ -85,4 +85,14 @@ public class Assert
         throw new AssertException(message);
     }
 
+    public static void IsGreaterThan<T>(T value, T compareTo, string message) where T : IComparable<T>
+    {
+        if (value.CompareTo(compareTo) >= 0)
+        {
+            return;
+        }
+
+        throw new AssertException(message);
+    }
+
 }

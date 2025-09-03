@@ -17,9 +17,9 @@ public class FindTicketByFuncionarioRange
 
     public IEnumerable<TicketDTO> Execute(int funcionarioId, DateTime dataInicial, DateTime dataFinal)
     {
+        Assert.IsGreaterThan(dataFinal, dataInicial, "Data final deve ser maior que data inicial");
         IEnumerable<TicketBO> bo = _ticketRepository.FindByFuncionarioRange(funcionarioId, dataInicial, dataFinal);
-        Assert.IsNotNull(bo, $"ticket não encontrado pelo funcionarioId{funcionarioId} e dataInicial {dataInicial} e dataFinal {dataFinal}");
-
+        Assert.IsNotNull(bo, $"ticket não encontrado pelo funcionarioId: {funcionarioId} e dataInicial: {dataInicial} e dataFinal: {dataFinal}");
         var ticketsDto = bo.Select(bo => new TicketDTO
         {
             Id = bo.Id,
