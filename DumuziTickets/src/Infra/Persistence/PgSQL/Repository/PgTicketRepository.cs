@@ -34,7 +34,7 @@ public class PgTicketRepository : ITicketRepository
                 return PgTicketMapper.ToBO(pgEntity);
         }
 
-        public TicketBO Update(TicketBO entity)
+        public TicketBO Update(int id, TicketBO entity)
         {
                 PgTicketEntity pgEntity = PgTicketMapper.ToEntity(entity);
                 _context.Tickets.Update(pgEntity);

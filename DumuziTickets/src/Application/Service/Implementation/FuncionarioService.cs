@@ -32,9 +32,9 @@ public class FuncionarioService : IFuncionarioService
         return useCase.Execute(funcionario);
     }
 
-    public FuncionarioDTO Update(FuncionarioDTO funcionario)
+    public FuncionarioDTO Update(int id, FuncionarioDTO funcionario)
     {
         UpdateFuncionarioUseCase useCase = new UpdateFuncionarioUseCase(_funcionarioRepository);
-        return useCase.Execute(funcionario);
+        return useCase.Execute(id, funcionario);
     }
 }

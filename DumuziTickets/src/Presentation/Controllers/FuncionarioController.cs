@@ -87,8 +87,7 @@ public class FuncionarioController : Controller
                 return BadRequest("Dados do funcionário não podem ser nulos");
             }
 
-            funcionario.Id = id;
-            FuncionarioDTO res = _funcionarioService.Update(funcionario);
+            FuncionarioDTO res = _funcionarioService.Update(id, funcionario);
 
             if (res == null)
             {

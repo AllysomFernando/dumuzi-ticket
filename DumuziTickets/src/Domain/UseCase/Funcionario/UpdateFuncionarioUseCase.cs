@@ -15,26 +15,17 @@ public class UpdateFuncionarioUseCase
         _funcionarioRepository = funcionarioRepository;
     }
 
-    public FuncionarioDTO Execute(FuncionarioDTO dto)
+    public FuncionarioDTO Execute(int id, FuncionarioDTO dto)
     {
-        FuncionarioBO bo = _funcionarioRepository.FindById(dto.Id);
+        FuncionarioBO bo = _funcionarioRepository.FindById(id);
 
         if (bo == null)
         {
             throw new Exception("Funcionario não encontrado.");
         }
 
-        if (bo.Cpf != dto.Cpf)
-        {
-            var exists = _funcionarioRepository.FindByCPF(dto.Cpf);
-            if (exists != null)
-            {
-                throw new BusinessExecption("Não é possivel atualizar com esse CPF, pois já consta em nosso sistema.");
-            }
-        }
-
         bo.AtualizarFuncionario(FuncionarioMapper.ToBO(dto));
-        bo = _funcionarioRepository.Update(bo);
+        bo = _funcionarioRepository.Update(id, bo);
         return FuncionarioMapper.ToDTO(bo);
     }
 }

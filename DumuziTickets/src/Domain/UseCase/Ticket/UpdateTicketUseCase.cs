@@ -14,10 +14,10 @@ public class UpdateTicketUseCase
         _ticketRepository = ticketRepository;
     }
 
-    public TicketDTO Execute(TicketDTO dto)
+    public TicketDTO Execute(int id, TicketDTO dto)
     {
         TicketBO bo = TicketMapper.ToBO(dto);
-        bo = _ticketRepository.Update(bo);
+        bo = _ticketRepository.Update(id, bo);
         return TicketMapper.ToDTO(bo);
     }
 }

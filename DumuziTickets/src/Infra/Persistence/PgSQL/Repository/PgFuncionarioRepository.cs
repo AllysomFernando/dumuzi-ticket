@@ -2,6 +2,7 @@ using DumuziTickets.domain.entities;
 using DumuziTickets.Domain.Repository;
 using DumuziTickets.Infra.Persistence.PgSQL.Config;
 using DumuziTickets.Infra.Persistence.PgSQL.Entities;
+using DumuziTickets.Infra.Persistence.PgSQL.Enum;
 using DumuziTickets.Infra.Persistence.PgSQL.Mappers;
 
 namespace DumuziTickets.Infra.Persistence.PgSQL.Repository;
@@ -41,10 +42,17 @@ public class PgFuncionarioRepository : IFuncionarioRepository
         return PgFuncionarioMapper.ToBO(pgEntity);
     }
 
-    public FuncionarioBO Update(FuncionarioBO entity)
+    public FuncionarioBO Update(int id, FuncionarioBO entity)
     {
-        PgFuncionarioEntity pgEntity = PgFuncionarioMapper.ToEntity(entity);
-        _context.Funcionarios.Update(pgEntity);
+        PgFuncionarioEntity pgEntity = _context.Funcionarios.FirstOrDefault(e => e.Id == id);
+        if (pgEntity == null)
+        {
+            throw new Exception("Funcionario não encontrado.");
+        }
+        pgEntity.Nome = entity.Nome;
+        pgEntity.Situacao = (Situacao)entity.Situacao;
+        pgEntity.UpdatedAt = entity.UpdatedAt;
+
         _context.SaveChanges();
         return PgFuncionarioMapper.ToBO(pgEntity);
     }

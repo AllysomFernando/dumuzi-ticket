@@ -7,5 +7,5 @@ public interface IRepository<TEntity, TKey>
     IEnumerable<TEntity> FindAll();
     TEntity? FindById(TKey id);
     TEntity Create(TEntity entity);
-    TEntity Update(TEntity entity);
+    TEntity Update(TKey id, TEntity entity);
 }

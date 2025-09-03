@@ -9,11 +9,11 @@ namespace DumuziTickets.Infra.Persistence.PgSQL.Entities;
 [Index(nameof(Cpf), IsUnique = true)]
 public class PgFuncionarioEntity
 {
-    [Key] public int Id { get; private set; }
-    [Required] public string Nome { get; private set; }
-    [Required] public string Cpf { get; private set; }
-    [Required] public Situacao Situacao { get; private set; }
-    [Required] public DateTime UpdatedAt { get; private set; }
+    [Key] public int Id { get; set; }
+    [Required] public string Nome { get; set; }
+    [Required] public string Cpf { get; set; }
+    [Required] public Situacao Situacao { get; set; }
+    [Required] public DateTime UpdatedAt { get; set; }
 
     public PgFuncionarioEntity(string nome, string cpf, Situacao situacao, DateTime updatedAt)
     {

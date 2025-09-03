@@ -17,7 +17,7 @@ public class FindFuncionarioUseCase
     public FuncionarioDTO Execute(int funcionarioId)
     {
         var bo = _funcionarioRepository.FindById(funcionarioId);
-        Assert.IsNull(bo, "Funcionario não encontrado");
+        Assert.IsNotNull(bo, "Funcionario não encontrado");
         return FuncionarioMapper.ToDTO(bo);
     }
 }

@@ -31,7 +31,6 @@ public class FuncionarioBO : AbstractEntityBO<int>, IDeletableEntity
     public void AtualizarFuncionario(FuncionarioBO bo)
     {
         Nome = bo.Nome;
-        Cpf = bo.Cpf;
         Situacao = bo.Situacao;
         AtualizarData();
 
