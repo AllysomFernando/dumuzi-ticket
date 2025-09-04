@@ -50,9 +50,8 @@ export const CreateTicketModal = ({
       setFuncionarioId('');
       setQuantidade('1');
       onClose();
-    } catch (error) {
-      console.error('Erro ao criar ticket:', error);
-      toast.error('Erro ao criar ticket. Tente novamente.');
+    } catch (error: any) {
+      toast.error(error?.response?.data.error)
     } finally {
       setLoading(false);
     }
@@ -89,7 +88,9 @@ export const CreateTicketModal = ({
                 className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               >
                 <option value="">Selecione um funcionário</option>
-                {funcionarios.map((funcionario) => (
+                {funcionarios
+                  .filter(f => f.situacao === 'A')
+                  .map((funcionario) => (
                   <option key={funcionario.id} value={funcionario.id.toString()}>
                     {funcionario.nome} - {funcionario.cpf}
                   </option>

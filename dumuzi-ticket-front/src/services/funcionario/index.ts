@@ -18,8 +18,14 @@ export const funcionarioService = {
   },
 
   create: async (funcionario: CreateFuncionarioDTO): Promise<FuncionarioDTO> => {
-    const response = await api.post('/Funcionario', funcionario);
-    return response.data;
+    try{
+      const response = await api.post('/Funcionario', funcionario);
+      return response.data; 
+    }catch(e)
+    {
+      throw e;
+    }
+
   },
 
   update: async (id: number, funcionario: UpdateFuncionarioDTO): Promise<FuncionarioDTO> => {

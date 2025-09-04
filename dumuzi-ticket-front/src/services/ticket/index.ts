@@ -29,8 +29,12 @@ export const ticketService = {
   },
 
   create: async (ticket: CreateTicketDTO): Promise<TicketDTO> => {
-    const response = await api.post('/Ticket', ticket);
-    return response.data;
+    try{
+        const response = await api.post('/Ticket', ticket);
+        return response.data;
+    }catch(e){
+      throw e;
+    }
   },
 
   update: async (id: number, ticket: UpdateTicketDTO): Promise<TicketDTO> => {

@@ -98,7 +98,6 @@ export const useDashboardData = () => {
 
   const toggleTicketStatus = useCallback(async (id: number) => {
     try {
-      // Get current ticket to check its status
       const ticket = tickets.find(t => t.id === id);
       if (!ticket) return false;
       

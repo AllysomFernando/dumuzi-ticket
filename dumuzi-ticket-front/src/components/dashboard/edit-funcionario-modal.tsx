@@ -70,18 +70,8 @@ export const EditFuncionarioModal = ({
       
       toast.success(`Funcionário ${nome} atualizado com sucesso!`);
       onClose();
-    } catch (error: unknown) {
-      console.error('Erro ao atualizar funcionário:', error);
-      if (error && typeof error === 'object' && 'response' in error) {
-        const axiosError = error as { response?: { status?: number; data?: { message?: string } } };
-        if (axiosError.response?.status === 400 && axiosError.response?.data?.message?.includes('CPF')) {
-          toast.error('Este CPF já está cadastrado');
-        } else {
-          toast.error('Erro ao atualizar funcionário. Tente novamente.');
-        }
-      } else {
-        toast.error('Erro ao atualizar funcionário. Tente novamente.');
-      }
+    } catch (error: any) {
+      toast.error(error?.response?.data.error)
     } finally {
       setLoading(false);
     }

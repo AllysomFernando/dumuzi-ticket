@@ -60,18 +60,8 @@ export const CreateFuncionarioModal = ({
       setNome('');
       setCpf('');
       onClose();
-    } catch (error: unknown) {
-      console.error('Erro ao criar funcionário:', error);
-      if (error && typeof error === 'object' && 'response' in error) {
-        const axiosError = error as { response?: { status?: number; data?: { message?: string } } };
-        if (axiosError.response?.status === 400 && axiosError.response?.data?.message?.includes('CPF')) {
-          toast.error('Este CPF já está cadastrado');
-        } else {
-          toast.error('Erro ao cadastrar funcionário. Tente novamente.');
-        }
-      } else {
-        toast.error('Erro ao cadastrar funcionário. Tente novamente.');
-      }
+    } catch (error: any) {
+      toast.error(error?.response?.data.error)
     } finally {
       setLoading(false);
     }

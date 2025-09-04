@@ -61,9 +61,8 @@ export const EditTicketModal = ({
       const funcionario = funcionarios.find(f => f.id === parseInt(funcionarioId));
       toast.success(`Ticket atualizado com sucesso para ${funcionario?.nome}!`);
       onClose();
-    } catch (error: unknown) {
-      console.error('Erro ao atualizar ticket:', error);
-      toast.error('Erro ao atualizar ticket. Tente novamente.');
+    } catch (error: any) {
+      toast.error(error?.response?.data.error)
     } finally {
       setLoading(false);
     }
