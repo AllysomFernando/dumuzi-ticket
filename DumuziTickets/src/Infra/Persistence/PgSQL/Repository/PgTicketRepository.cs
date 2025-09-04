@@ -86,7 +86,7 @@ public class PgTicketRepository : ITicketRepository
                 PgTicketEntity pgEntity = _context.Tickets.FirstOrDefault(e => e.Id == id);
                 Assert.IsNotNull(pgEntity, "Ticket não encontrado.");
                 pgEntity.Situacao = Situacao.A;
-                pgEntity.UpdatedAt = DateTime.UtcNow;
+                pgEntity.UpdatedAt = DateTime.Now;
 
                 _context.SaveChanges();
                 return PgTicketMapper.ToBO(pgEntity);
@@ -96,7 +96,7 @@ public class PgTicketRepository : ITicketRepository
                 PgTicketEntity pgEntity = _context.Tickets.FirstOrDefault(e => e.Id == id);
                 Assert.IsNotNull(pgEntity, "Ticket não encontrado.");
                 pgEntity.Situacao = Situacao.I;
-                pgEntity.UpdatedAt = DateTime.UtcNow;
+                pgEntity.UpdatedAt = DateTime.Now;
 
                 _context.SaveChanges();
                 return PgTicketMapper.ToBO(pgEntity);

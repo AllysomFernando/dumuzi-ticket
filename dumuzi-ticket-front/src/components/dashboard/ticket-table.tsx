@@ -2,7 +2,7 @@ import { User } from 'lucide-react';
 import { TicketDTO } from '@/types/ticket';
 import { FuncionarioDTO } from '@/types/funcionario';
 import { EmptyState } from './empty-state';
-import { formatDate } from '@/lib/format-utils';
+import { formatCPF, formatDate } from '@/lib/format-utils';
 
 interface TicketTableProps {
   tickets: TicketDTO[];
@@ -51,7 +51,7 @@ export const TicketTable = ({ tickets, funcionarios }: TicketTableProps) => {
                           {funcionario?.nome || 'Funcionário não encontrado'}
                         </div>
                         <div className="text-sm text-gray-500">
-                          {funcionario?.cpf}
+                          {formatCPF(funcionario!.cpf)}
                         </div>
                       </div>
                     </div>

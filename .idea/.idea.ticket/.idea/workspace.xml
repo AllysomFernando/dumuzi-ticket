@@ -10,8 +10,9 @@
   <component name="ChangeListManager">
     <list default="true" id="55d1c2da-e8d2-4665-af5d-76dbc684cef3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/FuncionarioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/FuncionarioController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/TicketController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/TicketController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgFuncionarioRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgFuncionarioRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumuzi-ticket-front/src/services/funcionario/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dumuzi-ticket-front/src/services/funcionario/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +111,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.DumuziTickets: http.executor": "Run",
+    ".NET Launch Settings Profile.DumuziTickets: http.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -186,7 +187,7 @@
       <workItem from="1756818881483" duration="11156000" />
       <workItem from="1756839506291" duration="8760000" />
       <workItem from="1756901567053" duration="22331000" />
-      <workItem from="1756928365825" duration="7230000" />
+      <workItem from="1756928365825" duration="7588000" />
     </task>
     <task id="LOCAL-00001" summary="fix: fixing the EnumSituacao and removing the createdAt to follow the bussines rule">
       <option name="closed" value="true" />
@@ -340,7 +341,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757011286321</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="feat: adding at controller">
+      <option name="closed" value="true" />
+      <created>1757011474556</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1757011474556</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +389,8 @@
     <MESSAGE value="fix: fixing the datetime to specific to get utc time" />
     <MESSAGE value="fix: fixing how the time is save at the database" />
     <MESSAGE value="feat: implementing the active and deactivate" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: implementing the active and deactivate" />
+    <MESSAGE value="feat: adding at controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: adding at controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -410,7 +420,38 @@
           </properties>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgFuncionarioRepository.cs</url>
+          <line>70</line>
+          <properties documentPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgFuncionarioRepository.cs" containingFunctionPresentation="Method 'Activate'">
+            <startOffsets>
+              <option value="2444" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2445" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgFuncionarioRepository.cs</url>
+          <line>59</line>
+          <properties documentPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgFuncionarioRepository.cs" containingFunctionPresentation="Method 'Deactivate'">
+            <startOffsets>
+              <option value="2061" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2062" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="LaunchSettings">
+        <watch expression="$exception.HelpLink" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

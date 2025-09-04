@@ -61,7 +61,7 @@ public class PgFuncionarioRepository : IFuncionarioRepository
         PgFuncionarioEntity pgEntity = _context.Funcionarios.FirstOrDefault(e => e.Id == id);
         Assert.IsNotNull(pgEntity, "Funcionario não encontrado.");
         pgEntity.Situacao = Situacao.I;
-        pgEntity.UpdatedAt = DateTime.UtcNow;
+        pgEntity.UpdatedAt = DateTime.Now;
 
         _context.SaveChanges();
         return PgFuncionarioMapper.ToBO(pgEntity);
@@ -72,7 +72,7 @@ public class PgFuncionarioRepository : IFuncionarioRepository
         PgFuncionarioEntity pgEntity = _context.Funcionarios.FirstOrDefault(e => e.Id == id);
         Assert.IsNotNull(pgEntity, "Funcionario não encontrado.");
         pgEntity.Situacao = Situacao.A;
-        pgEntity.UpdatedAt = DateTime.UtcNow;
+        pgEntity.UpdatedAt = DateTime.Now;
 
         _context.SaveChanges();
         return PgFuncionarioMapper.ToBO(pgEntity);

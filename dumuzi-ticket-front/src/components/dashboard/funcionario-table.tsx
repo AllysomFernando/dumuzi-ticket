@@ -85,7 +85,7 @@ export const FuncionarioTable = ({ funcionarios, onEdit, onToggleStatus }: Funci
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                   <div className="flex items-center">
                     <Calendar className="w-4 h-4 mr-1 text-gray-400" />
-                    {funcionario.dataAlteracao}
+                        {formatDateTime(funcionario.updatedAt)}
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">

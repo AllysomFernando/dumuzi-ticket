@@ -28,12 +28,12 @@ export const funcionarioService = {
   },
 
   inativar: async (id: number): Promise<FuncionarioDTO> => {
-    const response = await api.put(`/Funcionario/${id}/inativar`);
+    const response = await api.patch(`/Funcionario/deactivate/${id}`);
     return response.data;
   },
 
   ativar: async (id: number): Promise<FuncionarioDTO> => {
-    const response = await api.put(`/Funcionario/${id}/ativar`);
+    const response = await api.patch(`/Funcionario/activate/${id}`);
     return response.data;
   },
 };

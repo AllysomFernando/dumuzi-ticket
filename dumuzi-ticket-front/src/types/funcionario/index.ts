@@ -3,7 +3,7 @@ export interface FuncionarioDTO {
   nome: string;
   cpf: string;
   situacao: 'A' | 'I';
-  dataAlteracao: string;
+  updatedAt: string;
 }
 
 export interface CreateFuncionarioDTO {

@@ -106,7 +106,6 @@ export const CreateTicketModal = ({
                 id="quantidade"
                 type="number"
                 min="1"
-                max="10"
                 value={quantidade}
                 onChange={(e) => setQuantidade(e.target.value)}
                 required
