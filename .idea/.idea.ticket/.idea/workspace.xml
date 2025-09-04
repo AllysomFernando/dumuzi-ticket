@@ -8,12 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="55d1c2da-e8d2-4665-af5d-76dbc684cef3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgFuncionarioRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgFuncionarioRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumuzi-ticket-front/src/services/funcionario/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dumuzi-ticket-front/src/services/funcionario/index.ts" afterDir="false" />
-    </list>
+    <list default="true" id="55d1c2da-e8d2-4665-af5d-76dbc684cef3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,7 +106,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.DumuziTickets: http.executor": "Debug",
+    ".NET Launch Settings Profile.DumuziTickets: http.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -187,7 +182,7 @@
       <workItem from="1756818881483" duration="11156000" />
       <workItem from="1756839506291" duration="8760000" />
       <workItem from="1756901567053" duration="22331000" />
-      <workItem from="1756928365825" duration="7588000" />
+      <workItem from="1756928365825" duration="8301000" />
     </task>
     <task id="LOCAL-00001" summary="fix: fixing the EnumSituacao and removing the createdAt to follow the bussines rule">
       <option name="closed" value="true" />

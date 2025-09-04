@@ -1,10 +1,12 @@
 "use client";
 import React, { useState } from 'react';
+import { TicketDTO, UpdateTicketDTO } from '@/types/ticket';
 import { 
   StatsGrid, 
   TicketTable, 
   FilterModal, 
   CreateTicketModal,
+  EditTicketModal,
   StatsGridSkeleton,
   TableSkeleton
 } from '@/components/dashboard';
@@ -24,6 +26,8 @@ const TicketDashboard = () => {
   
   const [showFilterModal, setShowFilterModal] = useState(false);
   const [showCreateModal, setShowCreateModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [editingTicket, setEditingTicket] = useState<TicketDTO | null>(null);
 
   const handleShowFilterModal = () => {
     setShowFilterModal(true);
@@ -35,6 +39,19 @@ const TicketDashboard = () => {
 
   const handleClearFilters = () => {
     actions.clearFilters();
+  };
+
+  const handleEditTicket = (ticket: TicketDTO) => {
+    setEditingTicket(ticket);
+    setShowEditModal(true);
+  };
+
+  const handleToggleTicketStatus = async (ticket: TicketDTO) => {
+    await actions.toggleTicketStatus(ticket.id);
+  };
+
+  const handleUpdateTicket = async (id: number, ticket: UpdateTicketDTO) => {
+    await actions.updateTicket(id, ticket);
   };
 
   if (loading) {
@@ -71,6 +88,8 @@ const TicketDashboard = () => {
         <TicketTable
           tickets={filteredTickets}
           funcionarios={funcionarios}
+          onEdit={handleEditTicket}
+          onToggleStatus={handleToggleTicketStatus}
         />
 
         <FilterModal
@@ -87,6 +106,17 @@ const TicketDashboard = () => {
           onClose={() => setShowCreateModal(false)}
           funcionarios={funcionarios}
           onCreateTicket={actions.createTicket}
+        />
+
+        <EditTicketModal
+          isOpen={showEditModal}
+          onClose={() => {
+            setShowEditModal(false);
+            setEditingTicket(null);
+          }}
+          ticket={editingTicket}
+          funcionarios={funcionarios}
+          onUpdateTicket={handleUpdateTicket}
         />
 
         <Toaster />

@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { TicketDTO, CreateTicketDTO } from '@/types/ticket';
+import { TicketDTO, CreateTicketDTO, UpdateTicketDTO } from '@/types/ticket';
 import { FuncionarioDTO } from '@/types/funcionario';
 import { ticketService } from '@/services/ticket';
 import { funcionarioService } from '@/services/funcionario';
@@ -15,7 +15,7 @@ export const useDashboardData = () => {
   const [filterDataFinal, setFilterDataFinal] = useState('');
   const [filterTipoRefeicao, setFilterTipoRefeicao] = useState('');
 
-  const loadData = async () => {
+  const loadData = useCallback(async () => {
     try {
       setLoading(true);
       const [ticketsData, funcionariosData] = await Promise.all([
@@ -29,7 +29,7 @@ export const useDashboardData = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   const applyFilters = useCallback(() => {
     let filtered = tickets;
@@ -62,7 +62,7 @@ export const useDashboardData = () => {
 
   useEffect(() => {
     loadData();
-  }, []);
+  }, [loadData]);
 
   useEffect(() => {
     applyFilters();
@@ -85,6 +85,37 @@ export const useDashboardData = () => {
     }
   };
 
+  const updateTicket = useCallback(async (id: number, data: UpdateTicketDTO) => {
+    try {
+      await ticketService.update(id, data);
+      await loadData();
+      return true;
+    } catch (error) {
+      console.error('Erro ao atualizar ticket:', error);
+      return false;
+    }
+  }, [loadData]);
+
+  const toggleTicketStatus = useCallback(async (id: number) => {
+    try {
+      // Get current ticket to check its status
+      const ticket = tickets.find(t => t.id === id);
+      if (!ticket) return false;
+      
+      if (ticket.situacao === 'A') {
+        await ticketService.inativar(id);
+      } else {
+        await ticketService.ativar(id);
+      }
+      
+      await loadData();
+      return true;
+    } catch (error) {
+      console.error('Erro ao alterar status do ticket:', error);
+      return false;
+    }
+  }, [loadData, tickets]);
+
   return {
     tickets,
     funcionarios,
@@ -106,6 +137,8 @@ export const useDashboardData = () => {
       loadData,
       clearFilters,
       createTicket,
+      updateTicket,
+      toggleTicketStatus,
     },
   };
 };

@@ -1,15 +1,18 @@
-import { User } from 'lucide-react';
+import { User, Edit, ToggleLeft, ToggleRight } from 'lucide-react';
 import { TicketDTO } from '@/types/ticket';
 import { FuncionarioDTO } from '@/types/funcionario';
 import { EmptyState } from './empty-state';
+import { Button } from '@/components/ui/button';
 import { formatCPF, formatDate } from '@/lib/format-utils';
 
 interface TicketTableProps {
   tickets: TicketDTO[];
   funcionarios: FuncionarioDTO[];
+  onEdit: (ticket: TicketDTO) => void;
+  onToggleStatus: (ticket: TicketDTO) => void;
 }
 
-export const TicketTable = ({ tickets, funcionarios }: TicketTableProps) => {
+export const TicketTable = ({ tickets, funcionarios, onEdit, onToggleStatus }: TicketTableProps) => {
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200">
       <div className="px-6 py-4 border-b border-gray-200">
@@ -31,6 +34,9 @@ export const TicketTable = ({ tickets, funcionarios }: TicketTableProps) => {
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Data de Entrega
+              </th>
+              <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Ações
               </th>
             </tr>
           </thead>
@@ -72,6 +78,37 @@ export const TicketTable = ({ tickets, funcionarios }: TicketTableProps) => {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                     {formatDate(ticket.dataEntrega || ticket.updatedAt)}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                    <div className="flex justify-end gap-2">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => onEdit(ticket)}
+                        className="flex items-center gap-1"
+                      >
+                        <Edit className="w-3 h-3" />
+                        Editar
+                      </Button>
+                      <Button
+                        variant={ticket.situacao === 'A' ? 'destructive' : 'default'}
+                        size="sm"
+                        onClick={() => onToggleStatus(ticket)}
+                        className="flex items-center gap-1"
+                      >
+                        {ticket.situacao === 'A' ? (
+                          <>
+                            <ToggleLeft className="w-3 h-3" />
+                            Inativar
+                          </>
+                        ) : (
+                          <>
+                            <ToggleRight className="w-3 h-3" />
+                            Ativar
+                          </>
+                        )}
+                      </Button>
+                    </div>
                   </td>
                 </tr>
               );

@@ -37,4 +37,14 @@ export const ticketService = {
     const response = await api.put(`/Ticket/${id}`, ticket);
     return response.data;
   },
+
+  inativar: async (id: number): Promise<TicketDTO> => {
+    const response = await api.patch(`/Ticket/deactivate/${id}`)
+    return response.data
+  },
+
+  ativar: async (id: number): Promise<TicketDTO> => {
+    const response = await api.patch(`/Ticket/activate/${id}`);
+    return response.data
+  }
 };

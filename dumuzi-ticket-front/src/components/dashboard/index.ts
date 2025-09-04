@@ -5,6 +5,7 @@ export { TicketTable } from './ticket-table';
 export { EmptyState } from './empty-state';
 export { FilterModal } from './filter-modal';
 export { CreateTicketModal } from './create-ticket-modal';
+export { EditTicketModal } from './edit-ticket-modal';
 export { TableSkeleton } from './table-skeleton';
 export { StatsGridSkeleton } from './stats-grid-skeleton';
 export { CreateFuncionarioModal } from './create-funcionario-modal';
