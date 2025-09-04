@@ -71,11 +71,32 @@ public class PgTicketRepository : ITicketRepository
         public TicketBO Update(int id, TicketBO entity)
         {
                 PgTicketEntity pgEntity = _context.Tickets.FirstOrDefault(e => e.Id == id);
-                Assert.IsNull(pgEntity, "Ticket não encontrado.");
+                Assert.IsNotNull(pgEntity, "Ticket não encontrado.");
                 pgEntity.Id = entity.Id;
                 pgEntity.FuncionarioId = entity.Funcionario.Id;
                 pgEntity.Situacao = (Situacao)entity.Situacao;
                 pgEntity.Quantidade = entity.Quantidade;
+
+                _context.SaveChanges();
+                return PgTicketMapper.ToBO(pgEntity);
+        }
+
+        public TicketBO Activate(int id)
+        {
+                PgTicketEntity pgEntity = _context.Tickets.FirstOrDefault(e => e.Id == id);
+                Assert.IsNotNull(pgEntity, "Ticket não encontrado.");
+                pgEntity.Situacao = Situacao.A;
+                pgEntity.UpdatedAt = DateTime.UtcNow;
+
+                _context.SaveChanges();
+                return PgTicketMapper.ToBO(pgEntity);
+        }
+        public TicketBO Deactivate(int id)
+        {
+                PgTicketEntity pgEntity = _context.Tickets.FirstOrDefault(e => e.Id == id);
+                Assert.IsNotNull(pgEntity, "Ticket não encontrado.");
+                pgEntity.Situacao = Situacao.I;
+                pgEntity.UpdatedAt = DateTime.UtcNow;
 
                 _context.SaveChanges();
                 return PgTicketMapper.ToBO(pgEntity);

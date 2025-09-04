@@ -3,6 +3,7 @@ import { User, Edit, ToggleLeft, ToggleRight, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { FuncionarioDTO } from '@/types/funcionario';
 import { EmptyState } from './empty-state';
+import { formatCPF, formatDateTime } from '@/lib/format-utils';
 
 interface FuncionarioTableProps {
   funcionarios: FuncionarioDTO[];
@@ -11,20 +12,6 @@ interface FuncionarioTableProps {
 }
 
 export const FuncionarioTable = ({ funcionarios, onEdit, onToggleStatus }: FuncionarioTableProps) => {
-  const formatCPF = (cpf: string) => {
-    return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
-  };
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('pt-BR', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-  };
-
   const getSituacaoDisplay = (situacao: 'A' | 'I') => {
     return situacao === 'A' ? 'Ativo' : 'Inativo';
   };
@@ -98,7 +85,7 @@ export const FuncionarioTable = ({ funcionarios, onEdit, onToggleStatus }: Funci
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                   <div className="flex items-center">
                     <Calendar className="w-4 h-4 mr-1 text-gray-400" />
-                    {formatDate(funcionario.dataAlteracao)}
+                    {funcionario.dataAlteracao}
                   </div>
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">

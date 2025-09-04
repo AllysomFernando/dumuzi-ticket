@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { FuncionarioDTO, UpdateFuncionarioDTO } from '@/types/funcionario';
+import { formatCPF, unformatCPF, validateCPF } from '@/lib/format-utils';
 
 interface EditFuncionarioModalProps {
   isOpen: boolean;
@@ -37,21 +38,11 @@ export const EditFuncionarioModal = ({
     }
   }, [funcionario]);
 
-  const formatCPF = (value: string) => {
-    const numbers = value.replace(/\D/g, '');
-    return numbers.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
-  };
-
   const handleCpfChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const formatted = formatCPF(e.target.value);
     if (formatted.length <= 14) {
       setCpf(formatted);
     }
-  };
-
-  const validateCPF = (cpf: string) => {
-    const numbers = cpf.replace(/\D/g, '');
-    return numbers.length === 11;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -73,7 +64,7 @@ export const EditFuncionarioModal = ({
       setLoading(true);
       await onUpdateFuncionario(funcionario.id, {
         nome: nome.trim(),
-        cpf: cpf.replace(/\D/g, ''),
+        cpf: unformatCPF(cpf),
         situacao
       });
       

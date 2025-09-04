@@ -10,4 +10,6 @@ public interface ITicketService
     List<TicketDTO> FindByFuncionarioRange(int funcionarioId, DateTime dataInicial, DateTime dataFinal);
     TicketDTO Create(CreateTicketDTO ticket);
     TicketDTO Update(int id, UpdateTicketDTO ticket);
+    TicketDTO Activate(int id);
+    TicketDTO Deactivate(int id);
 }

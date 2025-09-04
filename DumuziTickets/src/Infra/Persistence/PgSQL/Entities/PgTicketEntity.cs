@@ -11,7 +11,7 @@ public class PgTicketEntity
     [Required] public int FuncionarioId { get; set; }
     [ForeignKey(nameof(FuncionarioId))] public PgFuncionarioEntity Funcionario { get;  set; }
     [Required] public int Quantidade { get; set; }
-    [Required] public Situacao Situacao { get;  set; }
+    [Required][Column(TypeName = "varchar(1)")] public Situacao Situacao { get;  set; }
     [Required][Column(TypeName = "timestamp")] public DateTime UpdatedAt { get; set; }
 
     public PgTicketEntity(int quantidade, int funcionarioId, Situacao situacao, DateTime updatedAt)

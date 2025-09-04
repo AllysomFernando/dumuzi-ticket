@@ -2,6 +2,7 @@ import { User } from 'lucide-react';
 import { TicketDTO } from '@/types/ticket';
 import { FuncionarioDTO } from '@/types/funcionario';
 import { EmptyState } from './empty-state';
+import { formatDate } from '@/lib/format-utils';
 
 interface TicketTableProps {
   tickets: TicketDTO[];
@@ -9,10 +10,6 @@ interface TicketTableProps {
 }
 
 export const TicketTable = ({ tickets, funcionarios }: TicketTableProps) => {
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('pt-BR');
-  };
-
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200">
       <div className="px-6 py-4 border-b border-gray-200">
@@ -28,6 +25,9 @@ export const TicketTable = ({ tickets, funcionarios }: TicketTableProps) => {
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Quantidade
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Situação
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Data de Entrega
@@ -59,6 +59,15 @@ export const TicketTable = ({ tickets, funcionarios }: TicketTableProps) => {
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
                       {ticket.quantidade} tickets
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                      ticket.situacao === 'A' 
+                        ? 'bg-green-100 text-green-800' 
+                        : 'bg-red-100 text-red-800'
+                    }`}>
+                      {ticket.situacao === 'A' ? 'Ativo' : 'Inativo'}
                     </span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">

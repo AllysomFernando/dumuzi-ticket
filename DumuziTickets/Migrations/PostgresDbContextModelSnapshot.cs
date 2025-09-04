@@ -38,8 +38,10 @@ namespace DumuziTickets.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Situacao")
-                        .HasColumnType("integer");
+                    b.Property<string>("Situacao")
+                        .IsRequired()
+                        .HasMaxLength(1)
+                        .HasColumnType("varchar(1)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp");
@@ -66,8 +68,10 @@ namespace DumuziTickets.Migrations
                     b.Property<int>("Quantidade")
                         .HasColumnType("integer");
 
-                    b.Property<int>("Situacao")
-                        .HasColumnType("integer");
+                    b.Property<string>("Situacao")
+                        .IsRequired()
+                        .HasMaxLength(1)
+                        .HasColumnType("varchar(1)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp");

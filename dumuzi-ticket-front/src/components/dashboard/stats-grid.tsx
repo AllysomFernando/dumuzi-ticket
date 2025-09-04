@@ -1,6 +1,7 @@
 import { Calendar, User, Utensils } from 'lucide-react';
 import { TicketDTO } from '@/types/ticket';
 import { StatsCard } from './stats-card';
+import { formatDate } from '@/lib/format-utils';
 
 interface StatsGridProps {
   filteredTickets: TicketDTO[];
@@ -9,10 +10,6 @@ interface StatsGridProps {
 }
 
 export const StatsGrid = ({ filteredTickets, filterDataInicial, filterDataFinal }: StatsGridProps) => {
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('pt-BR');
-  };
-
   const getTotalTicketsByPeriod = () => {
     return filteredTickets.reduce((total, ticket) => total + ticket.quantidade, 0);
   };

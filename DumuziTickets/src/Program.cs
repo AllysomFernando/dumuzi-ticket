@@ -4,6 +4,7 @@ using DumuziTickets.Domain.Repository;
 using DumuziTickets.Infra.Persistence.PgSQL.Config;
 using DumuziTickets.Infra.Persistence.PgSQL.Repository;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +19,14 @@ builder.Services.AddScoped<ITicketRepository, PgTicketRepository>();
 builder.Services.AddScoped<IFuncionarioService, FuncionarioService>();
 builder.Services.AddScoped<ITicketService, TicketService>();
 
-builder.Services.AddControllers();
+builder.Services
+    .AddControllers()
+    .AddJsonOptions(o =>
+    {
+        o.JsonSerializerOptions.Converters.Add(
+            new JsonStringEnumConverter(allowIntegerValues: false));
+    });
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>

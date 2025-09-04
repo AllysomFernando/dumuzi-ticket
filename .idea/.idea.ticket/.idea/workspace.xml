@@ -9,12 +9,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d1c2da-e8d2-4665-af5d-76dbc684cef3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/ActiveFuncionarioUseCase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/DeactivateFuncionarioUseCase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/ActiveTicketUseCase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/DeactivateTicketUseCase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ticket/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/Migrations/PostgresDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/Migrations/PostgresDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Implementation/FuncionarioService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Implementation/FuncionarioService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Implementation/TicketService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Implementation/TicketService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Interfaces/IFuncionario.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Interfaces/IFuncionario.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Interfaces/ITicket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Application/Service/Interfaces/ITicket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Domain/Repository/IRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Domain/Repository/IRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Config/PostgresDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Config/PostgresDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Entities/PgFuncionarioEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Entities/PgFuncionarioEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Entities/PgTicketEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Entities/PgTicketEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgFuncionarioRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgFuncionarioRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DumuziTickets/src/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DumuziTickets/src/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumuzi-ticket-front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/dumuzi-ticket-front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumuzi-ticket-front/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/dumuzi-ticket-front/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumuzi-ticket-front/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/dumuzi-ticket-front/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dumuzi-ticket-front/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/dumuzi-ticket-front/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumuzi-ticket-front/src/components/dashboard/create-funcionario-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/dumuzi-ticket-front/src/components/dashboard/create-funcionario-modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumuzi-ticket-front/src/components/dashboard/edit-funcionario-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/dumuzi-ticket-front/src/components/dashboard/edit-funcionario-modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumuzi-ticket-front/src/components/dashboard/funcionario-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/dumuzi-ticket-front/src/components/dashboard/funcionario-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumuzi-ticket-front/src/components/dashboard/stats-grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/dumuzi-ticket-front/src/components/dashboard/stats-grid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumuzi-ticket-front/src/components/dashboard/table-skeleton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/dumuzi-ticket-front/src/components/dashboard/table-skeleton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumuzi-ticket-front/src/components/dashboard/ticket-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/dumuzi-ticket-front/src/components/dashboard/ticket-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dumuzi-ticket-front/src/hooks/use-dashboard-data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dumuzi-ticket-front/src/hooks/use-dashboard-data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +46,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Immediate Window" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Request/FuncionarioRequestDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Request/TicketRequestDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Application/Dto/Response/FuncionarioResponseDTO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -43,7 +60,6 @@
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Application/Service/Interfaces/ITicket.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Application/UseCase/Funcionario/CreateFuncionarioUseCase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Assertions/Assert.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Users/allysom/Documents/www/pg/dumuzi-ticket/DumuziTickets/src/Domain/Assertions/Assert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/CreateTicketDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/FuncionarioDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Dto/TicketDTO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -60,12 +76,15 @@
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Repository/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Repository/ITicketRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/Services/IDeletableEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/ActiveFuncionarioUseCase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/CreateFuncionarioUseCase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/FindAllFuncionarioUseCase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/FindFuncionarioUseCase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/GetAllFuncionarioUseCase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Funcionario/UpdateFuncionarioUseCase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/ActiveTicketUseCase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/CreateTicketUseCase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/DeactivateTicketUseCase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/FindTicketByFuncionarioRange.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/FindTicketUseCase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Domain/UseCase/Ticket/GetAllTicketUseCase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -81,7 +100,6 @@
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Infra/Persistence/PgSQL/Repository/PgTicketRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/FuncionarioController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DumuziTickets/src/Presentation/Controllers/TicketController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DumuziTickets/tests/UseCases/CreateFuncionarioUseCaseTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/31acb4a850b345fd8f03bd7b5c8372c36e00/cc/5d079c26/JSType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3bd4df5aff92cabbc4d630be64227073db1b8539b3a1e47786b4b189d7cdb7/DbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/449b441523c469ed34ff5a5e14f0bafcd8f097aa463655303dc19048fa44ac3/EntityFrameworkServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -110,29 +128,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.DumuziTickets: http.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.18127961&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.DumuziTickets: http.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "XThreadsFramesViewSplitterKey": "0.18127961",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;GitIgnore&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "GitIgnore"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.DumuziTickets: http">
     <configuration name="DumuziTickets: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/DumuziTickets/DumuziTickets.csproj" />
@@ -188,7 +206,7 @@
       <workItem from="1756818881483" duration="11156000" />
       <workItem from="1756839506291" duration="8760000" />
       <workItem from="1756901567053" duration="22331000" />
-      <workItem from="1756928365825" duration="3518000" />
+      <workItem from="1756928365825" duration="6904000" />
     </task>
     <task id="LOCAL-00001" summary="fix: fixing the EnumSituacao and removing the createdAt to follow the bussines rule">
       <option name="closed" value="true" />

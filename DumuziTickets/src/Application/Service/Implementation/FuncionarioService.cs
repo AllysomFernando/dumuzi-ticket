@@ -37,4 +37,15 @@ public class FuncionarioService : IFuncionarioService
         UpdateFuncionarioUseCase useCase = new UpdateFuncionarioUseCase(_funcionarioRepository);
         return useCase.Execute(id, funcionario);
     }
+    public FuncionarioDTO Activate(int id)
+    {
+        ActiveFuncionarioUseCase useCase = new ActiveFuncionarioUseCase(_funcionarioRepository);
+        return useCase.Execute(id);
+    }
+
+    public FuncionarioDTO Deactivate(int id)
+    {
+        DeactivateFuncionarioUseCase useCase = new DeactivateFuncionarioUseCase(_funcionarioRepository);
+        return useCase.Execute(id);
+    }
 }

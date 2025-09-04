@@ -12,7 +12,7 @@ public class PgFuncionarioEntity
     [Key] public int Id { get; set; }
     [Required] public string Nome { get; set; }
     [Required] public string Cpf { get; set; }
-    [Required] public Situacao Situacao { get; set; }
+    [Required][Column(TypeName = "varchar(1)")] public Situacao Situacao { get; set; }
 
     [Required][Column(TypeName = "timestamp")] public DateTime UpdatedAt { get; set; }
 

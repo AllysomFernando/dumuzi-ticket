@@ -41,15 +41,20 @@ export const useDashboardData = () => {
     }
 
     if (filterDataInicial) {
-      filtered = filtered.filter(ticket => 
-        new Date(ticket.updatedAt) >= new Date(filterDataInicial)
-      );
+      filtered = filtered.filter(ticket => {
+        const ticketDate = new Date(ticket.dataEntrega || ticket.updatedAt);
+        const filterDate = new Date(filterDataInicial);
+        return ticketDate >= filterDate;
+      });
     }
 
     if (filterDataFinal) {
-      filtered = filtered.filter(ticket => 
-        new Date(ticket.updatedAt) <= new Date(filterDataFinal)
-      );
+      filtered = filtered.filter(ticket => {
+        const ticketDate = new Date(ticket.dataEntrega || ticket.updatedAt);
+        const filterDate = new Date(filterDataFinal);
+        filterDate.setHours(23, 59, 59, 999);
+        return ticketDate <= filterDate;
+      });
     }
 
     setFilteredTickets(filtered);
@@ -73,7 +78,7 @@ export const useDashboardData = () => {
   const createTicket = async (ticketData: CreateTicketDTO) => {
     try {
       await ticketService.create(ticketData);
-      await loadData(); // Recarrega os dados após criação
+      await loadData();
     } catch (error) {
       console.error('Erro ao criar ticket:', error);
       throw error;

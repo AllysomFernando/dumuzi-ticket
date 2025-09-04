@@ -8,4 +8,6 @@ public interface IRepository<TEntity, TKey>
     TEntity? FindById(TKey id);
     TEntity Create(TEntity entity);
     TEntity Update(TKey id, TEntity entity);
+    TEntity Activate(TKey id);
+    TEntity Deactivate(TKey id);
 }

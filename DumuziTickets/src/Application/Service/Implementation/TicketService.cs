@@ -52,4 +52,16 @@ public class TicketService : ITicketService
         return useCase.Execute(id, ticket);
     }
 
+    public TicketDTO Activate(int id)
+    {
+        ActiveTicketUseCase useCase = new ActiveTicketUseCase(_ticketRepository);
+        return useCase.Execute(id);
+    }
+
+    public TicketDTO Deactivate(int id)
+    {
+        DeactivateTicketUseCase useCase = new DeactivateTicketUseCase(_ticketRepository);
+        return useCase.Execute(id);
+    }
+
 }
