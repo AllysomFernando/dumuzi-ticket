@@ -1,4 +1,4 @@
-import { FuncionarioDTO } from "@/types/funcionario";
+import { FuncionarioDTO, CreateFuncionarioDTO, UpdateFuncionarioDTO } from "@/types/funcionario";
 import { api } from "..";
 
 export const funcionarioService = {
@@ -12,13 +12,30 @@ export const funcionarioService = {
     return response.data;
   },
 
-  create: async (funcionario: Omit<FuncionarioDTO, 'id'>): Promise<FuncionarioDTO> => {
+  getAtivos: async (): Promise<FuncionarioDTO[]> => {
+    const response = await api.get('/Funcionario/ativos');
+    return response.data;
+  },
+
+  create: async (funcionario: CreateFuncionarioDTO): Promise<FuncionarioDTO> => {
     const response = await api.post('/Funcionario', funcionario);
     return response.data;
   },
 
-  update: async (id: number, funcionario: Partial<FuncionarioDTO>): Promise<FuncionarioDTO> => {
+  update: async (id: number, funcionario: UpdateFuncionarioDTO): Promise<FuncionarioDTO> => {
     const response = await api.put(`/Funcionario/${id}`, funcionario);
+    return response.data;
+  },
+
+  // Método para "inativar" (soft delete)
+  inativar: async (id: number): Promise<FuncionarioDTO> => {
+    const response = await api.put(`/Funcionario/${id}/inativar`);
+    return response.data;
+  },
+
+  // Método para reativar
+  ativar: async (id: number): Promise<FuncionarioDTO> => {
+    const response = await api.put(`/Funcionario/${id}/ativar`);
     return response.data;
   },
 };
