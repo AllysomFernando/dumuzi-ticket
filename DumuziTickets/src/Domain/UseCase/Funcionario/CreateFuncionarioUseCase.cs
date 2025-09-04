@@ -1,6 +1,5 @@
 using DumuziTickets.Domain.Assertions;
 using DumuziTickets.Domain.Dto;
-using DumuziTickets.Domain.Exceptions;
 using DumuziTickets.Domain.Mappers;
 using DumuziTickets.Domain.Repository;
 
