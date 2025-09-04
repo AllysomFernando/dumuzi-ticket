@@ -90,4 +90,38 @@ public class TicketController : Controller
 
             return Ok(res);
     }
+    [HttpPatch("deactivate/{id}")]
+    public ActionResult<TicketDTO> Deactivate(int id)
+    {
+        if (id == null)
+        {
+            return BadRequest("O ID do funcionário não pode ser nulo");
+        }
+        TicketDTO res = _ticketService.Deactivate(id);
+
+        if (res == null)
+        {
+            return NotFound($"Funcionário com ID {id} não encontrado");
+        }
+
+        return Ok(res);
+    }
+
+    [HttpPatch("activate/{id}")]
+    public ActionResult<TicketDTO> Activate(int id)
+    {
+        if (id == null)
+        {
+            return BadRequest("O ID do ticket não pode ser nulo");
+        }
+
+        TicketDTO res = _ticketService.Activate(id);
+        if (res == null)
+        {
+            return NotFound($"Ticket com ID {id} não encontrado");
+        }
+
+        return Ok(res);
+    }
+
 }

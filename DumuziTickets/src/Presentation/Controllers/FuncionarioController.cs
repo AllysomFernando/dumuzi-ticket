@@ -71,6 +71,39 @@ public class FuncionarioController : Controller
             }
 
             return Ok(res);
+    }
 
+    [HttpPatch("deactivate/{id}")]
+    public ActionResult<FuncionarioDTO> Deactivate(int id)
+    {
+        if (id == null)
+        {
+            return BadRequest("O ID do funcionário não pode ser nulo");
+        }
+        FuncionarioDTO res = _funcionarioService.Deactivate(id);
+
+        if (res == null)
+        {
+            return NotFound($"Funcionário com ID {id} não encontrado");
+        }
+
+        return Ok(res);
+    }
+
+    [HttpPatch("activate/{id}")]
+    public ActionResult<FuncionarioDTO> Activate(int id)
+    {
+        if (id == null)
+        {
+            return BadRequest("O ID do funcionário não pode ser nulo");
+        }
+
+        FuncionarioDTO res = _funcionarioService.Activate(id);
+        if (res == null)
+        {
+            return NotFound($"Funcionário com ID {id} não encontrado");
+        }
+
+        return Ok(res);
     }
 }
