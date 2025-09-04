@@ -7,3 +7,6 @@ export { FilterModal } from './filter-modal';
 export { CreateTicketModal } from './create-ticket-modal';
 export { TableSkeleton } from './table-skeleton';
 export { StatsGridSkeleton } from './stats-grid-skeleton';
+export { CreateFuncionarioModal } from './create-funcionario-modal';
+export { EditFuncionarioModal } from './edit-funcionario-modal';
+export { FuncionarioTable } from './funcionario-table';
