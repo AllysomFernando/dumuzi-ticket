@@ -27,13 +27,11 @@ export const funcionarioService = {
     return response.data;
   },
 
-  // Método para "inativar" (soft delete)
   inativar: async (id: number): Promise<FuncionarioDTO> => {
     const response = await api.put(`/Funcionario/${id}/inativar`);
     return response.data;
   },
 
-  // Método para reativar
   ativar: async (id: number): Promise<FuncionarioDTO> => {
     const response = await api.put(`/Funcionario/${id}/ativar`);
     return response.data;

@@ -47,7 +47,6 @@ export const CreateTicketModal = ({
       const funcionario = funcionarios.find(f => f.id === parseInt(funcionarioId));
       toast.success(`Ticket criado com sucesso para ${funcionario?.nome}!`);
       
-      // Reset form
       setFuncionarioId('');
       setQuantidade('1');
       onClose();

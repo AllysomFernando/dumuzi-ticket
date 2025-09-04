@@ -60,13 +60,12 @@ export const CreateFuncionarioModal = ({
       setLoading(true);
       await onCreateFuncionario({
         nome: nome.trim(),
-        cpf: cpf.replace(/\D/g, ''), // Remove formatação
+        cpf: cpf.replace(/\D/g, ''), 
         situacao: 'A'
       });
       
       toast.success(`Funcionário ${nome} cadastrado com sucesso!`);
       
-      // Reset form
       setNome('');
       setCpf('');
       onClose();

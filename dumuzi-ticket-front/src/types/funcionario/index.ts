@@ -2,14 +2,14 @@ export interface FuncionarioDTO {
   id: number;
   nome: string;
   cpf: string;
-  situacao: 'A' | 'I'; // A = Ativo, I = Inativo
+  situacao: 'A' | 'I';
   dataAlteracao: string;
 }
 
 export interface CreateFuncionarioDTO {
   nome: string;
   cpf: string;
-  situacao: 'A'; // Sempre ativo na criação
+  situacao: 'A';
 }
 
 export interface UpdateFuncionarioDTO {
