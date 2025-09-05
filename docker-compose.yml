@@ -1,0 +1,44 @@
+services:
+  postgres:
+    image: postgres
+    container_name: dumuzi-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: dumuzi_user
+      POSTGRES_PASSWORD: dumuzi_pass
+      POSTGRES_DB: dumuzi_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres:/data/postgres
+    networks:
+      - postgres
+
+  backend:
+    build:
+      context: ./DumuziTickets
+      dockerfile: Dockerfile
+    ports:
+      - "5166:5166"
+    environment:
+      - ASPNETCORE_URLS=http://+:5166
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=dumuzi_db;Username=dumuzi_user;Password=dumuzi_pass
+    depends_on:
+      - postgres
+    networks:
+      - postgres
+  frontend:
+    build:
+      context: ./dumuzi-ticket-front
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: unless-stopped
+volumes:
+  postgres:
+
+networks:
+  postgres:
+    driver: bridge

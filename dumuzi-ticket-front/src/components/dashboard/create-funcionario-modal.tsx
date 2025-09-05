@@ -11,6 +11,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { CreateFuncionarioDTO } from '@/types/funcionario';
 import { formatCPF, unformatCPF, validateCPF } from '@/lib/format-utils';
+import { AxiosError } from "axios";
 
 interface CreateFuncionarioModalProps {
   isOpen: boolean;
@@ -60,8 +61,11 @@ export const CreateFuncionarioModal = ({
       setNome('');
       setCpf('');
       onClose();
-    } catch (error: any) {
-      toast.error(error?.response?.data.error)
+    } catch (error) {
+      const err = error as AxiosError<{ err: string }>;
+      const backendMessage = err.response?.data?.err;
+
+      toast.error(backendMessage ?? "Erro inesperado");
     } finally {
       setLoading(false);
     }

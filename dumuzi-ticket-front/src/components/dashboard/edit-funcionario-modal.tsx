@@ -11,6 +11,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { FuncionarioDTO, UpdateFuncionarioDTO } from '@/types/funcionario';
 import { formatCPF, unformatCPF, validateCPF } from '@/lib/format-utils';
+import { AxiosError } from 'axios';
 
 interface EditFuncionarioModalProps {
   isOpen: boolean;
@@ -70,8 +71,11 @@ export const EditFuncionarioModal = ({
       
       toast.success(`Funcionário ${nome} atualizado com sucesso!`);
       onClose();
-    } catch (error: any) {
-      toast.error(error?.response?.data.error)
+    } catch (error) {
+      const err = error as AxiosError<{ err: string }>;
+      const backendMessage = err.response?.data?.err;
+
+      toast.error(backendMessage ?? "Erro inesperado");
     } finally {
       setLoading(false);
     }

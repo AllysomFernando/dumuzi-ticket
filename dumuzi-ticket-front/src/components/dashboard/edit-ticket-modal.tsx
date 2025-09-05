@@ -11,6 +11,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { TicketDTO, UpdateTicketDTO } from '@/types/ticket';
 import { FuncionarioDTO } from '@/types/funcionario';
+import { AxiosError } from 'axios';
 
 interface EditTicketModalProps {
   isOpen: boolean;
@@ -61,8 +62,11 @@ export const EditTicketModal = ({
       const funcionario = funcionarios.find(f => f.id === parseInt(funcionarioId));
       toast.success(`Ticket atualizado com sucesso para ${funcionario?.nome}!`);
       onClose();
-    } catch (error: any) {
-      toast.error(error?.response?.data.error)
+    } catch (error) {
+      const err = error as AxiosError<{ err: string }>;
+      const backendMessage = err.response?.data?.err;
+
+      toast.error(backendMessage ?? "Erro inesperado");
     } finally {
       setLoading(false);
     }
