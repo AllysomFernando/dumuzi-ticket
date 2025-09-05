@@ -62,9 +62,9 @@ export const EditTicketModal = ({
       const funcionario = funcionarios.find(f => f.id === parseInt(funcionarioId));
       toast.success(`Ticket atualizado com sucesso para ${funcionario?.nome}!`);
       onClose();
-    } catch (error) {
-      const err = error as AxiosError<{ err: string }>;
-      const backendMessage = err.response?.data?.err;
+    } catch (err) {
+      const error = err as AxiosError<{ error: string }>;
+      const backendMessage = error.response?.data?.error;
 
       toast.error(backendMessage ?? "Erro inesperado");
     } finally {
