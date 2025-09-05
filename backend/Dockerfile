@@ -1,12 +1,12 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-COPY ["DumuziTickets.csproj", "."]
-RUN dotnet restore "DumuziTickets.csproj"
+COPY ["backend.csproj", "."]
+RUN dotnet restore "backend.csproj"
 
 COPY . .
-RUN dotnet build "DumuziTickets.csproj" -c Release -o /app/build
-RUN dotnet publish "DumuziTickets.csproj" -c Release -o /app/publish
+RUN dotnet build "backend.csproj" -c Release -o /app/build
+RUN dotnet publish "backend.csproj" -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
@@ -15,4 +15,4 @@ ENV ASPNETCORE_URLS=http://+:5166
 
 COPY --from=build /app/publish .
 
-ENTRYPOINT ["dotnet", "DumuziTickets.dll"]
+ENTRYPOINT ["dotnet", "backend.dll"]

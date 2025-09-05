@@ -12,11 +12,6 @@ export const funcionarioService = {
     return response.data;
   },
 
-  getAtivos: async (): Promise<FuncionarioDTO[]> => {
-    const response = await api.get('/Funcionario/ativos');
-    return response.data;
-  },
-
   create: async (funcionario: CreateFuncionarioDTO): Promise<FuncionarioDTO> => {
     try{
       const response = await api.post('/Funcionario', funcionario);
