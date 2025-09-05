@@ -1,7 +1,7 @@
-using DumuziTickets.Domain.Dto;
-using DumuziTickets.domain.entities;
+using backend.domain.entities;
+using backend.Domain.Dto;
 
-namespace DumuziTickets.Domain.Repository;
+namespace backend.Domain.Repository;
 
 public interface IFuncionarioRepository : IRepository<FuncionarioBO, int>
 {

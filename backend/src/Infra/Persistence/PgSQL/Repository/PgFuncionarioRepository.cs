@@ -1,12 +1,12 @@
-using DumuziTickets.Domain.Assertions;
-using DumuziTickets.domain.entities;
-using DumuziTickets.Domain.Repository;
-using DumuziTickets.Infra.Persistence.PgSQL.Config;
-using DumuziTickets.Infra.Persistence.PgSQL.Entities;
-using DumuziTickets.Infra.Persistence.PgSQL.Enum;
-using DumuziTickets.Infra.Persistence.PgSQL.Mappers;
+using backend.Domain.Assertions;
+using backend.domain.entities;
+using backend.Domain.Repository;
+using backend.Infra.Persistence.PgSQL.Config;
+using backend.Infra.Persistence.PgSQL.Entities;
+using backend.Infra.Persistence.PgSQL.Enum;
+using backend.Infra.Persistence.PgSQL.Mappers;
 
-namespace DumuziTickets.Infra.Persistence.PgSQL.Repository;
+namespace backend.Infra.Persistence.PgSQL.Repository;
 
 public class PgFuncionarioRepository : IFuncionarioRepository
 {

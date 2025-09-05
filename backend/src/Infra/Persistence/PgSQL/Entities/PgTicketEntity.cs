@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using DumuziTickets.Infra.Persistence.PgSQL.Enum;
+using backend.Infra.Persistence.PgSQL.Enum;
 
-namespace DumuziTickets.Infra.Persistence.PgSQL.Entities;
+namespace backend.Infra.Persistence.PgSQL.Entities;
 
 [Table("ticket")]
 public class PgTicketEntity

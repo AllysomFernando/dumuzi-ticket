@@ -1,4 +1,4 @@
-namespace DumuziTickets.domain;
+namespace backend.domain;
 
 public enum EnumSituacao
 {

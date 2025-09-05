@@ -1,9 +1,9 @@
-using DumuziTickets.domain;
-using DumuziTickets.domain.entities;
-using DumuziTickets.Infra.Persistence.PgSQL.Entities;
-using DumuziTickets.Infra.Persistence.PgSQL.Enum;
+using backend.domain;
+using backend.domain.entities;
+using backend.Infra.Persistence.PgSQL.Entities;
+using backend.Infra.Persistence.PgSQL.Enum;
 
-namespace DumuziTickets.Infra.Persistence.PgSQL.Mappers;
+namespace backend.Infra.Persistence.PgSQL.Mappers;
 
 public static class PgTicketMapper
 {

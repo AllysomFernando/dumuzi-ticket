@@ -1,10 +1,10 @@
-using DumuziTickets.domain;
-using DumuziTickets.Domain.Dto;
-using DumuziTickets.domain.entities;
-using DumuziTickets.Infra.Persistence.PgSQL.Entities;
-using DumuziTickets.Infra.Persistence.PgSQL.Enum;
+using backend.domain;
+using backend.domain.entities;
+using backend.Infra.Persistence.PgSQL.Entities;
+using backend.Infra.Persistence.PgSQL.Enum;
+using backend.Domain.Dto;
 
-namespace DumuziTickets.Infra.Persistence.PgSQL.Mappers;
+namespace backend.Infra.Persistence.PgSQL.Mappers;
 
 public static class PgFuncionarioMapper
 {

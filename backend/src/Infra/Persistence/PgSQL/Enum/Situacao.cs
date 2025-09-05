@@ -1,4 +1,4 @@
-namespace DumuziTickets.Infra.Persistence.PgSQL.Enum;
+namespace backend.Infra.Persistence.PgSQL.Enum;
 
 public enum Situacao
 {

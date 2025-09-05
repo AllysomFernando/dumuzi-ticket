@@ -1,6 +1,6 @@
-using DumuziTickets.domain.entities;
+using backend.domain.entities;
 
-namespace DumuziTickets.Domain.Repository;
+namespace backend.Domain.Repository;
 
 public interface ITicketRepository : IRepository<TicketBO, int>
 {

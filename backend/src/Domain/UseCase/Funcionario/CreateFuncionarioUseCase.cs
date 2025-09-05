@@ -1,9 +1,9 @@
-using DumuziTickets.Domain.Assertions;
-using DumuziTickets.Domain.Dto;
-using DumuziTickets.Domain.Mappers;
-using DumuziTickets.Domain.Repository;
+using backend.Domain.Assertions;
+using backend.Domain.Dto;
+using backend.Domain.Mappers;
+using backend.Domain.Repository;
 
-namespace DumuziTickets.Domain.UseCase.Funcionario;
+namespace backend.Domain.UseCase.Funcionario;
 
 public class CreateFuncionarioUseCase
 {

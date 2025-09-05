@@ -1,11 +1,11 @@
-using DumuziTickets.domain;
-using DumuziTickets.Domain.Assertions;
-using DumuziTickets.Domain.Dto;
-using DumuziTickets.domain.entities;
-using DumuziTickets.Domain.Mappers;
-using DumuziTickets.Domain.Repository;
+using backend.Domain.Assertions;
+using backend.Domain.Dto;
+using backend.domain.entities;
+using backend.Domain.Mappers;
+using backend.Domain.Repository;
+using backend.domain;
 
-namespace DumuziTickets.Domain.UseCase.Ticket;
+namespace backend.Domain.UseCase.Ticket;
 
 public class UpdateTicketUseCase
 {

@@ -1,9 +1,9 @@
-using DumuziTickets.Application.Service.Interfaces;
-using DumuziTickets.Domain.Dto;
-using DumuziTickets.Domain.Repository;
-using DumuziTickets.Domain.UseCase.Ticket;
+using backend.Application.Service.Interfaces;
+using backend.Domain.Dto;
+using backend.Domain.Repository;
+using backend.Domain.UseCase.Ticket;
 
-namespace DumuziTickets.Application.Service.Implementation;
+namespace backend.Application.Service.Implementation;
 
 public class TicketService : ITicketService
 {

@@ -1,8 +1,8 @@
-using DumuziTickets.Infra.Persistence.PgSQL.Entities;
-using DumuziTickets.Infra.Persistence.PgSQL.Enum;
+using backend.Infra.Persistence.PgSQL.Entities;
+using backend.Infra.Persistence.PgSQL.Enum;
 using Microsoft.EntityFrameworkCore;
 
-namespace DumuziTickets.Infra.Persistence.PgSQL.Config;
+namespace backend.Infra.Persistence.PgSQL.Config;
 
 public class PostgresDbContext : DbContext
 {

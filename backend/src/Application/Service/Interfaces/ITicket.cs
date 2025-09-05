@@ -1,6 +1,6 @@
-using DumuziTickets.Domain.Dto;
+using backend.Domain.Dto;
 
-namespace DumuziTickets.Application.Service.Interfaces;
+namespace backend.Application.Service.Interfaces;
 
 public interface ITicketService
 {

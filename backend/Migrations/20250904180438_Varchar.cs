@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace DumuziTickets.Migrations
+namespace backend.Migrations
 {
     /// <inheritdoc />
     public partial class Varchar : Migration

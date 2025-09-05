@@ -1,4 +1,4 @@
-namespace DumuziTickets.Domain.Dto;
+namespace backend.Domain.Dto;
 
 public record CreateTicketDTO
 {

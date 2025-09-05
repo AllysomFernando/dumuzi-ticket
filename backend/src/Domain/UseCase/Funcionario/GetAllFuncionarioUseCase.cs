@@ -1,8 +1,8 @@
-using DumuziTickets.Domain.Dto;
-using DumuziTickets.domain.entities;
-using DumuziTickets.Domain.Repository;
+using backend.Domain.Dto;
+using backend.domain.entities;
+using backend.Domain.Repository;
 
-namespace DumuziTickets.Domain.UseCase.Funcionario;
+namespace backend.Domain.UseCase.Funcionario;
 
 public class GetAllFuncionarioUseCase
 {

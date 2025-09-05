@@ -1,6 +1,6 @@
-using DumuziTickets.Domain.Exceptions;
+using backend.Domain.Exceptions;
 
-namespace DumuziTickets.Domain.Assertions;
+namespace backend.Domain.Assertions;
 
 public class Assert
 {

@@ -1,7 +1,7 @@
-using DumuziTickets.Domain.Dto;
-using DumuziTickets.domain.entities;
+using backend.Domain.Dto;
+using backend.domain.entities;
 
-namespace DumuziTickets.Domain.Mappers;
+namespace backend.Domain.Mappers;
 
 public class TicketMapper
 {

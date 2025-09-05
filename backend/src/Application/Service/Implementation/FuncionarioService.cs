@@ -1,9 +1,9 @@
-using DumuziTickets.Application.Service.Interfaces;
-using DumuziTickets.Domain.Dto;
-using DumuziTickets.Domain.Repository;
-using DumuziTickets.Domain.UseCase.Funcionario;
+using backend.Application.Service.Interfaces;
+using backend.Domain.Dto;
+using backend.Domain.Repository;
+using backend.Domain.UseCase.Funcionario;
 
-namespace DumuziTickets.Application.Service.Implementation;
+namespace backend.Application.Service.Implementation;
 
 public class FuncionarioService : IFuncionarioService
 {

@@ -1,6 +1,6 @@
-using DumuziTickets.domain;
+using backend.domain;
 
-namespace DumuziTickets.Application.DTO;
+namespace backend.Application.DTO;
 
 public record FuncionarioRequestDTO()
 {

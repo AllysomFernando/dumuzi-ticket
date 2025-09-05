@@ -1,8 +1,8 @@
-using DumuziTickets.Application.Service.Implementation;
-using DumuziTickets.Application.Service.Interfaces;
-using DumuziTickets.Domain.Repository;
-using DumuziTickets.Infra.Persistence.PgSQL.Config;
-using DumuziTickets.Infra.Persistence.PgSQL.Repository;
+using backend.Application.Service.Implementation;
+using backend.Application.Service.Interfaces;
+using backend.Domain.Repository;
+using backend.Infra.Persistence.PgSQL.Config;
+using backend.Infra.Persistence.PgSQL.Repository;
 using Microsoft.EntityFrameworkCore;
 using Polly; 
 using System.Text.Json.Serialization;
@@ -71,8 +71,8 @@ app.UseExceptionHandler(errorApp =>
         {
             DbUpdateException => 400,
             KeyNotFoundException => 404,
-            DumuziTickets.Domain.Exceptions.AssertException => 400,
-            DumuziTickets.Domain.Exceptions.BusinessExecption => 400,
+            backend.Domain.Exceptions.AssertException => 400,
+            backend.Domain.Exceptions.BusinessExecption => 400,
             ArgumentException => 400,
             _ => 500
         };

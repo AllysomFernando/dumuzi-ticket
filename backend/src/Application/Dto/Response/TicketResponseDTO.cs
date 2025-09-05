@@ -1,7 +1,7 @@
-using DumuziTickets.Application.DTO;
-using DumuziTickets.domain;
+using backend.Application.DTO;
+using backend.domain;
 
-namespace DumuziTickets.Application.Dto.Response;
+namespace backend.Application.Dto.Response;
 
 public record TicketResponseDTO()
 {

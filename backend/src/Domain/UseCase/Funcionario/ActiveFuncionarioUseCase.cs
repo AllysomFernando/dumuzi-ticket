@@ -1,10 +1,11 @@
-using DumuziTickets.Domain.Dto;
-using DumuziTickets.domain.entities;
-using DumuziTickets.Domain.Mappers;
-using DumuziTickets.Domain.Repository;
-using Assert = DumuziTickets.Domain.Assertions.Assert;
+using backend.Domain.Assertions;
+using backend.Domain.Dto;
+using backend.domain.entities;
+using backend.Domain.Mappers;
+using backend.Domain.Repository;
+using Assert = backend.Domain.Assertions.Assert;
 
-namespace DumuziTickets.Domain.UseCase.Funcionario;
+namespace backend.Domain.UseCase.Funcionario;
 
 public class ActiveFuncionarioUseCase
 {

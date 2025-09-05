@@ -1,6 +1,6 @@
-using DumuziTickets.Domain.Assertions;
+using backend.Domain.Assertions;
 
-namespace DumuziTickets.domain.entities;
+namespace backend.domain.entities;
 
 public class FuncionarioBO : AbstractEntityBO<int>
 {

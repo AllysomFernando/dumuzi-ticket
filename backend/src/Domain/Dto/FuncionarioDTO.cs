@@ -1,6 +1,6 @@
-using DumuziTickets.domain;
+using backend.domain;
 
-namespace DumuziTickets.Domain.Dto;
+namespace backend.Domain.Dto;
 
 public record FuncionarioDTO
 {

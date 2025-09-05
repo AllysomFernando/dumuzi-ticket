@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace DumuziTickets.Migrations
+namespace backend.Migrations
 {
     /// <inheritdoc />
     public partial class UpdatedAtWithoutTimeZone : Migration

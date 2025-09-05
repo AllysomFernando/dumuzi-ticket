@@ -16,7 +16,7 @@ services:
 
   backend:
     build:
-      context: ./DumuziTickets
+      context: ./backend
       dockerfile: Dockerfile
     ports:
       - "5166:5166"
@@ -29,7 +29,7 @@ services:
       - postgres
   frontend:
     build:
-      context: ./dumuzi-ticket-front
+      context: ./frontend
       dockerfile: Dockerfile
     ports:
       - "3000:3000"

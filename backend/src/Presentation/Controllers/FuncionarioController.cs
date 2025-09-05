@@ -1,8 +1,8 @@
-using DumuziTickets.Application.Service.Interfaces;
-using DumuziTickets.Domain.Dto;
+using backend.Application.Service.Interfaces;
+using backend.Domain.Dto;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DumuziTickets.Presentation.Controllers;
+namespace backend.Presentation.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 public class FuncionarioController : Controller

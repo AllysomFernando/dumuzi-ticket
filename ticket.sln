@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DumuziTickets", "DumuziTickets\DumuziTickets.csproj", "{57790FD5-1D85-45C3-8658-E88DBCA1B0F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backend", "backend\backend.csproj", "{57790FD5-1D85-45C3-8658-E88DBCA1B0F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
