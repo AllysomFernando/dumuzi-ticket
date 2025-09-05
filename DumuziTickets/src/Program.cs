@@ -4,6 +4,7 @@ using DumuziTickets.Domain.Repository;
 using DumuziTickets.Infra.Persistence.PgSQL.Config;
 using DumuziTickets.Infra.Persistence.PgSQL.Repository;
 using Microsoft.EntityFrameworkCore;
+using Polly; 
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -44,7 +45,17 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<PostgresDbContext>();
-    db.Database.Migrate();
+
+    var retryPolicy = Policy
+        .Handle<Exception>()
+        .WaitAndRetry(5, attempt => TimeSpan.FromSeconds(5));
+
+    retryPolicy.Execute(() =>
+    {
+        Console.WriteLine("🔄 Tentando aplicar migrations...");
+        db.Database.Migrate();
+        Console.WriteLine("✅ Migrations aplicadas com sucesso!");
+    });
 }
 
 app.UseExceptionHandler(errorApp =>
